@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/sb-admin-2.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <a href="/" class="navbar-brand">Connect</a>
+        <div class="nav navbar-nav">
+            <li><a href="/accompagnements">Accompagnements</a></li>
+            <li><a href="/correspondance">Correspondances & transferts</a></li>
+            <li><a href="/recrutement">Recrutement</a></li>
+            <li><a href="{{ path_for('contact') }}">Contact</a></li>
+            <li><a href="{{ path_for('connexion') }}">Connexion</a></li>
+        </div>
+    </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+<div class="row">
+    <div class="col-sm-offset-2 ">
+        Ce site est déclaré à la CNIL sous les numéros 1135943 et 1135949. || <a href="/qui-sommes-nous">Qui sommes nous ?</a> <a href="/liens">sites conseillés</a>
+    </div>
+</div>
+{% block javascripts %}
+    <script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../public/js/sb-admin-2.min.js"></script>
+{% endblock %}
+
+</body>
+
+</html>
+
+
+
+
+

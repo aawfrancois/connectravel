@@ -1,0 +1,23 @@
+{
+    "name": "antoine/slim3",
+    "authors": [
+        {
+            "name": "antoinef",
+            "email": "antoinefrancois95@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "": "app/"
+        }
+    },
+    "require": {
+        "slim/slim": "^3.7",
+        "slim/twig-view": "^2.2",
+        "twbs/bootstrap": "^3.3",
+        "slim/pdo": "^1.10",
+        "illuminate/database": "^5.4",
+        "filp/whoops": "^2.1",
+        "vlucas/phpdotenv": "^2.4"
+    }
+}

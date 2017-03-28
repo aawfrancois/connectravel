@@ -1,0 +1,45 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <head>
+        <title>Contact</title>
+    </head>
+
+
+    <div class="container">
+        <header class="row">
+            <div class="col-lg-12 col-lg-offset-1">
+                <h1>Contact</h1>
+            </div>
+        </header>
+        <form action={{ path_for('contact') }} method="post">
+            <div class="row">
+                <div class="form-group col-md-5">
+                    <label for="name">Votre nom</label>
+                    <input type="text" class="form-control" name="name" id="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-5">
+                    <label for="email">Votre email</label>
+                    <input type="text" class="form-control" name="email" id="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-5">
+                    <label for="content">Votre message</label>
+                    <textarea type="text" class="form-control" name="content" id="content"></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Valider">
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+{% endblock %}
