@@ -9,7 +9,7 @@ $container['debug'] = function () {
 };
 
 // Twig
-$container['view'] = function ($container) {
+$container['view'] = function (\Slim\Container $container) {
     $view = new \Slim\Views\Twig(BASE_DIR . '/views', [
         'cache' => false
     ]);
@@ -19,11 +19,14 @@ $container['view'] = function ($container) {
     return $view;
 };
 
-$container['db'] = function ($c) {
-    $db = $c['settings']['db'];
-    $pdo = new PDO("mysql:host=" . $db['127.0.0.1'] . ";dbname=" . $db['Connect'],
-        $db['root'], $db['guerre1995']);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    return $pdo;
+// dataSource
+$container['dataSource'] = function (\Slim\Container $container) {
+    $settings = $container->get('settings');
+
+    return new \Modelight\DataSource\MySQL(
+        $settings['dataSource']['host'],
+        $settings['dataSource']['database'],
+        $settings['dataSource']['username'],
+        $settings['dataSource']['password']
+    );
 };

@@ -7,6 +7,7 @@ class User extends \Modelight\Model
     const ROLE_ADMIN = 'admin';
     const ROLE_COMPANION = 'companion';
 
+
     const CIVILITE_MR = 'Mr';
     const CIVILITE_MME = 'Mme';
 
@@ -202,18 +203,18 @@ class User extends \Modelight\Model
     /**
      * @return null|string
      */
-    public function getCivilite()
+    public function getCivility()
     {
         return $this->civility;
     }
 
     /**
-     * @param null|string $civilite
+     * @param null|string $civility
      * @return $this
      */
-    public function setCivilite($civilite)
+    public function setCivility($civility)
     {
-        $this->civility = $civilite;
+        $this->civility = $civility;
 
         return $this;
     }

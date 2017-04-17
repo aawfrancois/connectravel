@@ -2,6 +2,9 @@
 
 <html>
 <head>
+    <title>
+        {% block title %}ConnecTravel{% endblock %}
+    </title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/sb-admin-2.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -23,13 +26,15 @@
 {% block content %}{% endblock %}
 
 <div class="row">
-    <div class="col-sm-offset-2 ">
-        Ce site est déclaré à la CNIL sous les numéros 1135943 et 1135949. || <a href="/qui-sommes-nous">Qui sommes nous ?</a> <a href="/liens">sites conseillés</a>
+    <div class="text-center">
+        Ce site est déclaré à la CNIL sous les numéros 1135943 et 1135949. || <a href="/qui-sommes-nous">Qui sommes nous
+            ?</a> <a href="/liens">sites conseillés</a>
     </div>
 </div>
 {% block javascripts %}
-    <script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../public/js/sb-admin-2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/sb-admin-2.min.js"></script>
 {% endblock %}
 
 </body>

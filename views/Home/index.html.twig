@@ -1,13 +1,8 @@
 {% extends "layout.twig" %}
 
-{% block content %}
+{% block title %}{{ parent() }} | Home{% endblock %}
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Connectravel</title>
-    </head>
-    <body>
+{% block content %}
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
@@ -35,7 +30,8 @@
                             </div>
                             <div class="panel-body">
                                 <img src="img/unosel.gif">connecTravel est partenaire de
-                                <a href="http://www.unosel.org/">l'Union National des Organisations de Séjours Educatifs, Linguistiques et des
+                                <a href="http://www.unosel.org/">l'Union National des Organisations de Séjours
+                                    Educatifs, Linguistiques et des
                                     Ecoles de Langues</a>
                             </div>
                         </div>
@@ -112,7 +108,8 @@
                                             avion
                                         </li>
                                         <li><a href="/accompagnements">d'accompagnement</a> en train (ou avion)</li>
-                                        <li><a href="/correspondance">de correspondances</a> dans les gares et aéroports</li>
+                                        <li><a href="/correspondance">de correspondances</a> dans les gares et aéroports
+                                        </li>
                                         <li>de transferts entre une adresse et une gare ou un aéroport</li>
                                     </ul>
                                     Avec CONNECTRAVEL, les organisateurs de vacances pour jeunes peuvent dynamiser leurs
@@ -132,9 +129,4 @@
             </section>
         </div>
     </div>
-    </div>
-    </body>
-    </html>
-
-    {{ parent() }}
 {% endblock %}

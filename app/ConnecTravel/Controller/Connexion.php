@@ -12,11 +12,8 @@ class Connexion extends \ConnecTravel\Controller
      */
     public function connexion(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
-        $this->container->view->render($response, 'pages/connexion.html.twig');
-    }
 
-    public function authentification()
-    {
 
+        $this->getView()->render($response, 'pages/connexion.html.twig');
     }
 }
