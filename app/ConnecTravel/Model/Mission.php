@@ -2,7 +2,7 @@
 
 namespace ConnecTravel\Model;
 
-class Mission extends \ConnecTravel\Model
+class Mission extends \Modelight\Model
 {
 
 }

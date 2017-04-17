@@ -14,4 +14,9 @@ class Connexion extends \ConnecTravel\Controller
     {
         $this->container->view->render($response, 'pages/connexion.html.twig');
     }
+
+    public function authentification()
+    {
+
+    }
 }

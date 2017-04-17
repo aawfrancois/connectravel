@@ -18,6 +18,22 @@
         "slim/pdo": "^1.10",
         "illuminate/database": "^5.4",
         "filp/whoops": "^2.1",
-        "vlucas/phpdotenv": "^2.4"
+        "vlucas/phpdotenv": "^2.4",
+        "rbaaboud/modelight": "*"
+    },
+
+    "repositories": {
+        "modelight": {
+            "type": "package",
+            "package": {
+                "name": "rbaaboud/modelight",
+                "version": "1.0",
+                "source": {
+                    "url": "git@github.com:rbaaboud/modelight.git",
+                    "type": "git",
+                    "reference": "origin/develop"
+                }
+            }
+        }
     }
 }
