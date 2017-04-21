@@ -14,7 +14,8 @@
         "filp/whoops": "^2.1",
         "vlucas/phpdotenv": "^2.4",
         "symfony/var-dumper": "^3.2.7",
-        "rbaaboud/modelight": "^0.1.0"
+        "rbaaboud/modelight": "^0.1.0",
+        "slim/flash": "^0.2.0"
     },
     "config": {
         "optimize-autoloader": true

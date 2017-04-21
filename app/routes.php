@@ -18,8 +18,15 @@ $app->map(['GET', 'POST'],'/qui-sommes-nous', \ConnecTravel\Controller\StaticPag
 
 $app->map(['GET', 'POST'],'/liens', \ConnecTravel\Controller\StaticPages::class . ':liens');
 
+$app->map(['GET', 'POST'],'/listuser', \ConnecTravel\Controller\ListUser::class . ':listuser');
+
+$app->map(['GET', 'POST'],'/listmission', \ConnecTravel\Controller\ListMission::class . ':listmission');
+
 $app->map(['GET', 'POST'],'/inscription', \ConnecTravel\Controller\Inscription::class . ':inscription')
     ->setName('inscription');
 
-$app->map(['GET', 'POST'],'/addmission', \ConnecTravel\Controller\Addmission::class . ':addmission')
+$app->map(['GET', 'POST'],'/addmission', \ConnecTravel\Controller\AddMission::class . ':addmission')
     ->setName('addmission');
+
+$app->map(['GET', 'POST'],'/adduser', \ConnecTravel\Controller\AddUser::class . ':adduser')
+    ->setName('adduser');

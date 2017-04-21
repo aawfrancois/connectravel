@@ -1,39 +1,73 @@
 {% extends "layout.twig" %}
 
+{% block title %}{{ parent() }} | Ajout Mission{% endblock %}
+
 {% block content %}
-    <head>
-        <title>addmission</title>
-    </head>
-
-
     <div class="container">
-        <header class="row">
-            <div class="col-lg-12 col-lg-offset-1">
-                <h1>Ajouter une mission</h1>
-            </div>
-        </header>
-        <form action={{ path_for('addmission') }} method="post">
-            <div class="row">
-                <div class="form-group col-md-5">
-                    <label for="place_departure">lieu de départ</label>
-                    <input type="text" class="form-control" name="place_departure" id="place_departure">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-5">
-                    <label for="place_arrival">lieu d'arrivée</label>
-                    <input type="text" class="form-control" name="place_arrival" id="place_arrival">
-                </div>
-            </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <h3>Ajouter une mission</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <form role="form">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group input-group">
+                                            <span class="input-group-addon"><i class="fa fa-list-ol"></i>
+                                            </span>
+                                                <input type="text" class="form-control" id="mission_number"
+                                                       placeholder="Numéro de mission">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group input-group">
+                                            <span class="input-group-addon"><i class="fa fa-map-marker"></i>
+                                            </span>
+                                                <input type="text" class="form-control" id="place_departure"
+                                                       placeholder="Lieu de départ">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group input-group">
+                                                <span class="input-group-addon"><i class="fa fa-map-marker"></i>
+                                                </span>
+                                                <input type="text" class="form-control" id="place_arrival"
+                                                       placeholder="Lieu d'arrivée">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group input-group">
+                                            <span class="input-group-addon"><i class="fa fa-clock-o"></i>
+                                            </span>
+                                                <input type="text" class="form-control" id="time"
+                                                       placeholder="Temps de la mission">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group input-group">
+                                            <span class="input-group-addon"><i class="fa fa-calendar-o"></i>
+                                            </span>
+                                                <input type="text" class="form-control" id="date"
+                                                       placeholder="Date de la mission">
+                                            </div>
+                                        </div>
+                                    </div>
 
-            <div class="row">
-                <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="Valider">
+                                    <button type="submit" class="btn btn-primary pull-right">Valider</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-        </form>
+        </div>
     </div>
-
-
 {% endblock %}

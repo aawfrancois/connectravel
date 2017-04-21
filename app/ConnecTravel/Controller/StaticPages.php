@@ -12,26 +12,27 @@ class StaticPages extends \ConnecTravel\Controller
      */
     public function accompagnements(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
-        $this->container->view->render($response, 'pages/accompagnements.html.twig');
+        $this->getView()->render($response, 'StaticPages/accompagnements.html.twig');
     }
 
     public function correspondance(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
-        $this->container->view->render($response, 'pages/correspondance.html.twig');
+        $this->getView()->render($response, 'StaticPages/correspondance.html.twig');
     }
 
     public function recrutement(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
-        $this->container->view->render($response, 'pages/recrutement.html.twig');
+        $this->getView()->render($response, 'StaticPages/recrutement.html.twig');
     }
 
     public function qsn(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
-        $this->container->view->render($response, 'pages/qui-sommes-nous.html.twig');
+        $this->getView()->render($response, 'StaticPages/qui-sommes-nous.html.twig');
     }
 
     public function liens(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
-        $this->container->view->render($response, 'pages/liens.html.twig');
+        $this->getView()->render($response, 'StaticPages/liens.html.twig');
     }
 }
+

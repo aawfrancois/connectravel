@@ -20,6 +20,16 @@ class Controller
     }
 
     /**
+     * Returns flash service (Flash)
+     *
+     * @return \Slim\Flash\Messages
+     */
+    protected function getFlash()
+    {
+        return $this->container->get('flash');
+    }
+
+    /**
      * Returns view service (Twig)
      *
      * @return \Slim\Views\Twig

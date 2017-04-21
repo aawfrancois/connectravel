@@ -38,6 +38,9 @@ class Mission extends \Modelight\Model
         ],
         'time' => [
             'type' => \PDO::PARAM_STR
+        ],
+        'date' => [
+            'type' => \PDO::PARAM_STR
         ]
 
     ];
@@ -67,6 +70,16 @@ class Mission extends \Modelight\Model
      * @var string
      */
     protected $time;
+
+    /**
+     * @var string
+     */
+    protected $date;
+
+    /**
+     * @return string
+     */
+
 
     /**
      * @return int
@@ -162,6 +175,26 @@ class Mission extends \Modelight\Model
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param string $date
+     * @return $this
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
 
 }
 

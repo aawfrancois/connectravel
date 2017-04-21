@@ -1,15 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: antoinefrancois
- * Date: 26/03/2017
- * Time: 16:09
- */
-
 namespace ConnecTravel\Controller;
 
-
-class Addmission extends \ConnecTravel\Controller
+class AddMission extends \ConnecTravel\Controller
 {
     /**
      * addmission page
@@ -19,7 +11,11 @@ class Addmission extends \ConnecTravel\Controller
      */
     public function addmission(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
-        $this->container->view->render($response, 'pages/addmission.html.twig');
+        $request->getParsedBody();
+
+        var_dump($request->getParsedBody());
+
+        $this->getView()->render($response, 'pages/addmission.html.twig');
     }
 
 }
