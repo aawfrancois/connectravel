@@ -1,8 +1,6 @@
 <?php
 
-namespace ConnecTravel\Controller;
-
-use ConnecTravel\Model\CompanionCollection;
+namespace ConnecTravel\Controller\FrontEnd;
 
 class Home extends \ConnecTravel\Controller
 {
@@ -14,6 +12,6 @@ class Home extends \ConnecTravel\Controller
      */
     public function index(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
-        $this->container->get('view')->render($response, 'Home/index.html.twig');
+        $this->getView()->render($response, 'FrontEnd/Home/index.html.twig');
     }
 }

@@ -1,32 +1,26 @@
 <?php
 
-$app->map(['GET', 'POST'],'/', \ConnecTravel\Controller\Home::class . ':index');
+$app->map(['GET', 'POST'], '/', \ConnecTravel\Controller\FrontEnd\Home::class . ':index');
 
-$app->map(['GET', 'POST'],'/contact', \ConnecTravel\Controller\Contact::class . ':Contact')
-    ->setName('contact');
+// FrontEnd
 
-$app->map(['GET', 'POST'],'/connexion', \ConnecTravel\Controller\Connexion::class . ':connexion')
-    ->setName('connexion');
+$app->map(['GET', 'POST'], '/accompagnements', \ConnecTravel\Controller\FrontEnd\StaticPages::class . ':accompagnements');
+$app->map(['GET', 'POST'], '/correspondance', \ConnecTravel\Controller\FrontEnd\StaticPages::class . ':correspondance');
+$app->map(['GET', 'POST'], '/recrutement', \ConnecTravel\Controller\FrontEnd\StaticPages::class . ':recrutement');
+$app->map(['GET', 'POST'], '/qui-sommes-nous', \ConnecTravel\Controller\FrontEnd\StaticPages::class . ':qsn');
+$app->map(['GET', 'POST'], '/liens', \ConnecTravel\Controller\FrontEnd\StaticPages::class . ':liens');
+$app->map(['GET', 'POST'], '/contact', \ConnecTravel\Controller\FrontEnd\StaticPages::class . ':Contact');
 
-$app->map(['GET', 'POST'],'/accompagnements', \ConnecTravel\Controller\StaticPages::class . ':accompagnements');
+// BackEnd
 
-$app->map(['GET', 'POST'],'/correspondance', \ConnecTravel\Controller\StaticPages::class . ':correspondance');
+$app->map(['GET', 'POST'], '/admin/user/subscription', \ConnecTravel\Controller\BackEnd\User::class . ':subscription');
+$app->map(['GET', 'POST'], '/admin/user/login', \ConnecTravel\Controller\BackEnd\User::class . ':login');
+$app->map(['GET', 'POST'], '/admin/user/logout', \ConnecTravel\Controller\BackEnd\User::class . ':logout');
 
-$app->map(['GET', 'POST'],'/recrutement', \ConnecTravel\Controller\StaticPages::class . ':recrutement');
+$app->map(['GET', 'POST'], '/admin/user', \ConnecTravel\Controller\BackEnd\User::class . ':index');
+$app->map(['GET', 'POST'], '/admin/user/edit', \ConnecTravel\Controller\BackEnd\User::class . ':edit');
 
-$app->map(['GET', 'POST'],'/qui-sommes-nous', \ConnecTravel\Controller\StaticPages::class . ':qsn');
+$app->map(['GET', 'POST'], '/admin/mission', \ConnecTravel\Controller\BackEnd\Mission::class . ':index');
+$app->map(['GET', 'POST'], '/admin/mission/edit', \ConnecTravel\Controller\BackEnd\Mission::class . ':edit');
 
-$app->map(['GET', 'POST'],'/liens', \ConnecTravel\Controller\StaticPages::class . ':liens');
 
-$app->map(['GET', 'POST'],'/listuser', \ConnecTravel\Controller\ListUser::class . ':listuser');
-
-$app->map(['GET', 'POST'],'/listmission', \ConnecTravel\Controller\ListMission::class . ':listmission');
-
-$app->map(['GET', 'POST'],'/inscription', \ConnecTravel\Controller\Inscription::class . ':inscription')
-    ->setName('inscription');
-
-$app->map(['GET', 'POST'],'/addmission', \ConnecTravel\Controller\AddMission::class . ':addmission')
-    ->setName('addmission');
-
-$app->map(['GET', 'POST'],'/adduser', \ConnecTravel\Controller\AddUser::class . ':adduser')
-    ->setName('adduser');

@@ -1,9 +1,9 @@
 {% extends "layout.twig" %}
 
+{% block title %}{{ parent() }} | Connexion{% endblock %}
+
 {% block content %}
-    <head xmlns="http://www.w3.org/1999/html">
-        <title>Connexion</title>
-    </head>
+
 
     <div class="container">
         <div class="row">
@@ -13,7 +13,7 @@
                         <h3 class="panel-title col-sm-offset-4">Connexion</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" action="{{ path_for('connexion') }}" method="post">
+                        <form role="form" action="/admin/user/login" method="post">
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="E-mail" name="email" type="email"
@@ -24,7 +24,7 @@
                                            type="password" value="">
                                 </div>
                                 <input type="submit" value="Se connecter" class="btn btn-lg btn-success btn-block">
-                                <a class="btn btn-sm btn-default btn-block" href="{{ path_for('inscription') }}">
+                                <a class="btn btn-sm btn-default btn-block" href="/admin/user/subscription">
                                     Pas encore inscrit ?
                                 </a>
                             </fieldset>
