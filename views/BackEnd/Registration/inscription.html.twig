@@ -12,7 +12,7 @@
                 <h1>Inscription</h1>
             </div>
         </header>
-        <form action="{{ path_for('inscription') }}" method="post">
+        <form action="" method="post">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="text" class="form-control" name="email" id="email">
@@ -26,7 +26,8 @@
                 <input type="password" class="form-control" name="password-confirm" id="password-confirm">
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Valider">
+                <input type="hidden" name="__posted" value="1"/>
+                <button type="submit" class="btn btn-primary pull-right">S'inscrire</button>
             </div>
         </form>
     </div>

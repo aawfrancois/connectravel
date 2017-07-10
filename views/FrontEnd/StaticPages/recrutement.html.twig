@@ -1,13 +1,9 @@
 {% extends "layout.twig" %}
 
+{% block title %}{{ parent() }} | Accompagnement{% endblock %}
+
 {% block content %}
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Recrutement</title>
-    </head>
-    <body>
     <div class="container">
         <div class="row">
             <section class="col-sm-12">
@@ -74,7 +70,7 @@
                                             30 de chaque mois.
                                             Un bulletin de salaire récapitulant l'ensemble des missions est édité et
                                             envoyé une fois par mois.
-                                            Vous pouvez postuler en ligne en vous <a href="">inscrivant</a> sur le site
+                                            Vous pouvez postuler en ligne en vous <a href="/admin/user/subscription">inscrivant</a> sur le site
                                             .
                                         </div>
                                     </div>
@@ -86,7 +82,4 @@
             </section>
         </div>
     </div>
-    </body>
-    </html>
-
 {% endblock %}

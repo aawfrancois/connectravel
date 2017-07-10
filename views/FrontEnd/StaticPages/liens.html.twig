@@ -1,13 +1,9 @@
 {% extends "layout.twig" %}
 
+{% block title %}{{ parent() }} | Accompagnement{% endblock %}
+
 {% block content %}
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Accompagnements</title>
-    </head>
-    <body>
     <div class="container">
         <div class="row">
             <section class="col-sm-12">
@@ -115,8 +111,12 @@
                                         </div>
                                         <div class="panel-body">
                                             <img class="pull-right" src="/img/logo_sts.jpg">
-                                            Membre de l'UNOSEL et certifié NF Service, STS Séjours Linguistiques propose des séjours linguistiques de qualité depuis plus de 50 ans.
-                                            En immersion, en école de langues, au pair, en summer camp ou sur un campus universitaire, vous trouverez chez STS le séjour qui vous correspond, que vous soyez collégien, lycéen, étudiant, adulte ou professionnel.Numéro vert : 0800 02 51 51 (appel gratuit).<br>
+                                            Membre de l'UNOSEL et certifié NF Service, STS Séjours Linguistiques propose
+                                            des séjours linguistiques de qualité depuis plus de 50 ans.
+                                            En immersion, en école de langues, au pair, en summer camp ou sur un campus
+                                            universitaire, vous trouverez chez STS le séjour qui vous correspond, que
+                                            vous soyez collégien, lycéen, étudiant, adulte ou professionnel.Numéro vert
+                                            : 0800 02 51 51 (appel gratuit).<br>
                                             <a href="http://www.sts.fr/">http://www.sts.fr/</a>
                                         </div>
                                     </div>
@@ -129,8 +129,6 @@
         </div>
         </section>
     </div>
-    </div>
-    </body>
-    </html>
+
 
 {% endblock %}

@@ -12,6 +12,8 @@ class Home extends \ConnecTravel\Controller
      */
     public function index(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
-        $this->getView()->render($response, 'FrontEnd/Home/index.html.twig');
+        $this->getView()->render($response, 'FrontEnd/Home/index.html.twig' , [
+            "session" => $_SESSION
+        ]);
     }
 }

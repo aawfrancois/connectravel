@@ -2,7 +2,7 @@
 
 // Start PHP session
 // FIXME Replace this by a service...
-session_start();
+//session_start();
 
 /** @var \Slim\Container $container */
 $container = $app->getContainer();

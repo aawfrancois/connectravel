@@ -1,13 +1,9 @@
 {% extends "layout.twig" %}
 
+{% block title %}{{ parent() }} | Accompagnement{% endblock %}
+
 {% block content %}
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Qui sommes nous ?</title>
-        <link rel="stylesheet" type="text/css" href="../../../public/css/perso.css">
-    </head>
-    <body>
+
     <div class="container">
         <div class="qsn">
             CONNECTRAVEL est une SARL au capital de 10500 € avec un siège social situé 442 route de Bordeaux, 16000
@@ -34,7 +30,5 @@
             compagnies aériennes et de chaînes d'hôtels.<br>
         </div>
     </div>
-    </body>
-    </html>
 
 {% endblock %}

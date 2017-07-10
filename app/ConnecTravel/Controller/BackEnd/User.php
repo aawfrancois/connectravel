@@ -14,36 +14,112 @@ class User extends \ConnecTravel\Controller
      */
     public function login(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
-        $email = $request->getParam('email');
-        $password = $request->getParam('password');
 
         if ($request->isPost()) {
+            $email = $request->getParam('email');
+            $password = $request->getParam('password');
+
+
             try {
                 if ($email === null || $password === null) {
                     throw new \InvalidArgumentException('email or password is null.');
                 }
 
+                /** @var \ConnecTravel\Model\User $user */
                 $user = $this->getDataSource()->findOneBy(\ConnecTravel\Model\User::class, [
                     'email' => [
                         'type' => \PDO::PARAM_STR,
                         'value' => $email
                     ],
-                    [
-                        'password' => [
-                            'type' => \PDO::PARAM_STR,
-                            'value' => $password
-                        ]
+                    'password' => [
+                        'type' => \PDO::PARAM_STR,
+                        'value' => md5($password)
                     ]
                 ]);
 
-            } catch (\Exception $e) {
+                $_SESSION['email'] = $user->getEmail();
+                $_SESSION['role'] = $user->getRole();
+                $_SESSION['id'] = $user->getId();
+
+
+
+                $twig = $this->getView()->getEnvironment();
+                $twig->addGlobal("session", $_SESSION);
+
+                $this->getFlash()->addMessage('error', 'Bonjour ' . $user->getFirstname() . ' :)');
+
+                return $response->withRedirect('/admin/user/login');
+                // return $response->withRedirect('/admin/user/list');
+            } catch (\InvalidArgumentException $e) {
                 $this->getFlash()->addMessage('error', 'Identifiants invalides.');
 
                 return $response->withRedirect('/admin/user/login');
             }
         }
 
-        return $this->getView()->render($response, 'BackEnd/Connexion/connexion.html.twig');
+        return $this->getView()->render($response, 'BackEnd/Connexion/connexion.html.twig', [
+            "session" => $_SESSION
+        ]);
+    }
+
+
+    public function logout(\Slim\Http\Request $request, \Slim\Http\Response $response)
+    {
+        $_SESSION = array();
+        session_destroy();
+        return $response->withRedirect('/');
+    }
+
+    public function subscription(\Slim\Http\Request $request, \Slim\Http\Response $response)
+    {
+        if ($request->isPost()) {
+            $datas = $request->getParsedBody();
+            $email = $datas['email'];
+            $password = $datas['password'];
+            $password_confirm = $datas['password-confirm'];
+
+            if ($password === $password_confirm) {
+
+                try {
+
+                    /** @var \ConnecTravel\Model\User $user */
+                    $user = new \ConnecTravel\Model\User();
+
+                    if (!empty($_POST["__posted"])) {
+                        $user->setEmail($email);
+                        $user->setPassword(md5($password));
+                        $user->setRole('companion');
+
+                        $newUser = $this->getDataSource()->fetch('SELECT * FROM user WHERE email = :email', [
+                            'email' => [
+                                'value' => $email,
+                                'type' => \PDO::PARAM_INT
+                            ]
+                        ]);
+                    }
+                    if (empty($newUser)){
+                        $this->getDataSource()->insert($user);
+                        return $response->withRedirect('/admin/user/login');
+                    }
+                    dump($newUser);
+                    return $response->withRedirect('/admin/user/subscription');
+
+                } catch (\InvalidArgumentException $e) {
+
+                    $this->getFlash()->addMessageNow('error', 'Identifiants invalides.');
+                    return $response->withRedirect('/admin/user/login');
+                }
+            }
+            $this->getFlash()->addMessage('error', 'Les champs mot de passe et confirmation ne sont pas identiques.');
+            $response->withRedirect('/');
+        }
+
+
+        return $this->getView()->render($response, 'BackEnd/Registration/inscription.html.twig');
+    }
+
+    public function accept(\Slim\Http\Request $request, \Slim\Http\Response $response){
+
     }
 
     /**
@@ -55,9 +131,22 @@ class User extends \ConnecTravel\Controller
      */
     public function index(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
-        $CompanionCollection = $this->getDataSource()->findAll('Connectravel\Model\User');
+        if (!array_key_exists('role', $_SESSION)) {
 
-        $this->getView()->render($response, 'BackEnd/User/listuser.html.twig', ["CompanionCollection" => $CompanionCollection]);
+            return $response->withRedirect('/error403');
+
+        } elseif ($_SESSION['role'] == 'admin') {
+
+            $CompanionCollection = $this->getDataSource()->findAll(\ConnecTravel\Model\User::class);
+
+            $this->getView()->render($response, 'BackEnd/User/userList.html.twig', [
+                "CompanionCollection" => $CompanionCollection,
+                "session" => $_SESSION
+            ]);
+
+        } else {
+            return $response->withRedirect('/error403');
+        }
     }
 
     /**
@@ -69,7 +158,74 @@ class User extends \ConnecTravel\Controller
      */
     public function edit(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
-        $this->getView()->render($response, 'BackEnd/User/adduser.html.twig');
+        $isNew = 1;
+
+        if (!array_key_exists('role', $_SESSION)) {
+            return $response->withRedirect('/error403');
+        } elseif ($_SESSION['role'] == 'admin') {
+
+            $data = $request->getParams();
+
+            if (!array_key_exists('id', $data)) {
+                $user = new \ConnecTravel\Model\User();
+
+                $datas = $request->getParsedBody();
+
+                $user->setFirstname($datas['firstname']);
+                $user->setLastname($datas['lastname']);
+                $user->setBirthDate($datas['birth_date']);
+                $user->setBirthPlace($datas['birth_place']);
+                $user->setNationality($datas['nationality']);
+                $user->setAdress($datas['adress']);
+                $user->setPostalCode($datas['postal_code']);
+                $user->setCity($datas['city']);
+                $user->setPhone($datas['phone']);
+                $user->setEmail($datas['email']);
+                $user->setPassword($datas['password']);
+
+
+                $isNew = 1;
+
+            } else {
+                $id = $request->getParam('id');
+                $user = $this->getDataSource()->findOneBy(\ConnecTravel\Model\User::class, [
+                    'id' => [
+                        'type' => \PDO::PARAM_INT,
+                        'value' => $id
+                    ],
+                ]);
+
+                $isNew = 0;
+            }
+            if (!empty($_POST["__posted"])) {
+                $user->setData($_REQUEST);
+                $this->getDataSource()->save($user);
+                return $response->withRedirect('/admin/user');
+            }
+        }
+
+        $this->getView()->render($response, 'BackEnd/User/userEdit.html.twig', [
+            "session" => $_SESSION,
+            "user" => $user,
+            "isNew" => $isNew,
+        ]);
+    }
+
+    public function delete(\Slim\Http\Request $request, \Slim\Http\Response $response, $args)
+    {
+        $id = $request->getParam('id');
+
+        $user = $this->getDataSource()->findOneBy(\ConnecTravel\Model\User::class, [
+            'id' => [
+                'type' => \PDO::PARAM_INT,
+                'value' => $id
+            ],
+        ]);
+
+        $this->getDataSource()->delete($user);
+
+        return $response->withRedirect('/admin/user');
+
     }
 }
 

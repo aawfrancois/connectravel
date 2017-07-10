@@ -20,7 +20,17 @@
             <li><a href="/correspondance">Correspondances & transferts</a></li>
             <li><a href="/recrutement">Recrutement</a></li>
             <li><a href="mailto:contact@connectravel.com?subject=Demande d'informations">Contact</a></li>
-            <li><a href="/admin/user/login">Connexion</a></li>
+            {% if session.role == 'admin' %}
+            <li><a href="/admin/user">Liste Utilisateurs</a></li>
+            {% endif %}
+            {% if (session.role == 'admin') or (session.role == 'companion') %}
+            <li><a href="/admin/mission">Liste Missions</a></li>
+            {% endif %}
+            {% if session['email'] is defined %}
+                <li><a href="/admin/user/logout">Deconnexion</a></li>
+            {% else %}
+                <li><a href="/admin/user/login">Connexion</a></li>
+            {% endif %}
         </div>
     </div>
 </nav>

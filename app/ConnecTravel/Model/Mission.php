@@ -33,7 +33,13 @@ class Mission extends \Modelight\Model
         'place_departure' => [
             'type' => \PDO::PARAM_STR
         ],
+        'start_time' => [
+            'type' => \PDO::PARAM_STR
+        ],
         'place_arrival' => [
+            'type' => \PDO::PARAM_STR
+        ],
+        'end_time' => [
             'type' => \PDO::PARAM_STR
         ],
         'time' => [
@@ -41,6 +47,9 @@ class Mission extends \Modelight\Model
         ],
         'date' => [
             'type' => \PDO::PARAM_STR
+        ],
+        'accept' => [
+            'type' => \PDO::PARAM_INT
         ]
 
     ];
@@ -74,12 +83,39 @@ class Mission extends \Modelight\Model
     /**
      * @var string
      */
-    protected $date;
+    protected $start_time;
 
     /**
-     * @return string
+     * @var string
      */
+    protected $end_time;
 
+    /**
+     * @var string
+     */
+    protected $date;
+
+
+/**
+* @return int
+*/
+    protected $accept;
+
+    /**
+     * @return mixed
+     */
+    public function getAccept()
+    {
+        return $this->accept;
+    }
+
+    /**
+     * @param mixed $accept
+     */
+    public function setAccept($accept)
+    {
+        $this->accept = $accept;
+    }
 
     /**
      * @return int
@@ -174,6 +210,35 @@ class Mission extends \Modelight\Model
         $this->time = $time;
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStartTime()
+    {
+        return $this->start_time;
+    }
+
+    /**
+     * @param string $start_time
+     */
+    public function setStartTime($start_time)
+    {
+        $this->start_time = $start_time;
+    }
+
+    public function getEndTime()
+    {
+        return $this->end_time;
+    }
+
+    /**
+     * @param string $end_time
+     */
+    public function setEndTime($end_time)
+    {
+        $this->end_time = $end_time;
     }
 
     /**
