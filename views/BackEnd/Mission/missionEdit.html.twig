@@ -18,13 +18,17 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <form role="form" method="post">
+                                    <legend>
+                                        Informations pour la mission
+                                    </legend>
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-list-ol"></i>
                                             </span>
                                                 <input type="text" class="form-control" name="mission_number"
-                                                       placeholder="Numéro de mission" value="{{ mission.getMissionNumber() }}">
+                                                       placeholder="Numéro de mission"
+                                                       value="{{ mission.getMissionNumber() }}">
                                             </div>
                                         </div>
                                     </div>
@@ -34,7 +38,8 @@
                                             <span class="input-group-addon"><i class="fa fa-clock-o"></i>
                                             </span>
                                                 <input type="text" class="form-control" name="start_time"
-                                                       placeholder="Heure de début" value="{{ mission.getStartTime() }}">
+                                                       placeholder="Heure de début"
+                                                       value="{{ mission.getStartTime() }}">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -52,7 +57,8 @@
                                             <span class="input-group-addon"><i class="fa fa-map-marker"></i>
                                             </span>
                                                 <input type="text" class="form-control" name="place_departure"
-                                                       placeholder="Lieu de départ" value="{{ mission.getPlaceDeparture() }}">
+                                                       placeholder="Lieu de départ"
+                                                       value="{{ mission.getPlaceDeparture() }}">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -60,7 +66,8 @@
                                                 <span class="input-group-addon"><i class="fa fa-map-marker"></i>
                                                 </span>
                                                 <input type="text" class="form-control" name="place_arrival"
-                                                       placeholder="Lieu d'arrivée" value="{{ mission.getPlaceArrival() }}">
+                                                       placeholder="Lieu d'arrivée"
+                                                       value="{{ mission.getPlaceArrival() }}">
                                             </div>
                                         </div>
                                     </div>
@@ -70,7 +77,8 @@
                                             <span class="input-group-addon"><i class="fa fa-clock-o"></i>
                                             </span>
                                                 <input type="text" class="form-control" name="time"
-                                                       placeholder="Temps de la mission" value="{{ mission.getTime() }}">
+                                                       placeholder="Temps de la mission"
+                                                       value="{{ mission.getTime() }}">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -81,17 +89,135 @@
                                                        placeholder="Date de la mission" value="{{ mission.getDate() }}">
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="fa fa-calendar-o"></i>
-                                            </span>
-                                                <input type="text" class="form-control" name="priorite"
-                                                       placeholder="priorite" value="">
+                                    </div>
+                                    <legend>
+                                        Cout de la mission
+                                    </legend>
+                                    <legend>
+                                        <h4>infos salaires</h4>
+                                    </legend>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label>Salaire horaire</label>
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control">
+                                                    <span class="input-group-addon"><i class="fa fa-euro"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label>Congés payés</label>
+                                                <div class="form-group input-group">
+                                                    <input type="text" value="9,60" class="form-control">
+                                                    <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label>Précarité</label>
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control">
+                                                    <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label>commission forfaitaire</label>
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control">
+                                                    <span class="input-group-addon"><i class="fa fa-euro"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label>commission / pax</label>
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control">
+                                                    <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label>Avance sur frais</label>
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control">
+                                                    <span class="input-group-addon"><i class="fa fa-euro"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <legend>
+                                        <h4>infos vente</h4>
+                                    </legend>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label>Taux horaire</label>
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control">
+                                                    <span class="input-group-addon"><i class="fa fa-euro"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label>Frais forfaitaires</label>
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control">
+                                                    <span class="input-group-addon"><i class="fa fa-euro"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>Commission forfaitaire /pax</label>
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control">
+                                                    <span class="input-group-addon"><i class="fa fa-euro"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label>commission billeterie</label>
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control">
+                                                    <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>taux commission /pax /h</label>
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control">
+                                                    <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label>Taux TVA</label>
+                                                <div class="form-group input-group">
+                                                    <input type="text" class="form-control">
+                                                    <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <input type="hidden" name="__posted" value="1"/>
+                                    <input type="hidden" id="ajout" name="__posted" value="1"/>
                                     <button type="submit" class="btn btn-primary pull-right">Valider</button>
+
                                 </form>
                             </div>
                         </div>

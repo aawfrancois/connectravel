@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/perso.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/toastr.min.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-static-top">
@@ -37,13 +38,16 @@
 
 {{ flash.message('error')[0] }}
 
-{% block content %}{% endblock %}
-
-{% block javascripts %}
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/sb-admin-2.min.js"></script>
+{% block content %}
+    {% block javascripts %}
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/sb-admin-2.min.js"></script>
+        <script type="text/javascript" src="/js/toastr.min.js"></script>
+    {% endblock %}
 {% endblock %}
+
+
 
 </body>
 {% block footer %}

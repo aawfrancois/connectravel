@@ -2,8 +2,6 @@
 
 namespace ConnecTravel\Controller\BackEnd;
 
-use ConnecTravel\Controller;
-
 class Mission extends \ConnecTravel\Controller
 {
     /**
@@ -103,14 +101,10 @@ class Mission extends \ConnecTravel\Controller
             'id' => [
                 'type' => \PDO::PARAM_INT,
                 'value' => $id
-            ],
+            ]
         ]);
-        $mission->getData();
-
-
 
         return $response->withRedirect('/admin/mission');
-
     }
 
     public function delete(\Slim\Http\Request $request, \Slim\Http\Response $response, $args)

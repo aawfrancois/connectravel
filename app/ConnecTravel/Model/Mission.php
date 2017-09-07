@@ -50,6 +50,42 @@ class Mission extends \Modelight\Model
         ],
         'accept' => [
             'type' => \PDO::PARAM_INT
+        ],
+        'salary' => [
+            'type' => \PDO::PARAM_INT
+        ],
+        'time_off' => [
+            'type' => \PDO::PARAM_INT
+        ],
+        'precarity' => [
+            'type' => \PDO::PARAM_INT
+        ],
+        'commission_forfaitaire' => [
+            'type' => \PDO::PARAM_INT
+        ],
+        'commission_pax' => [
+            'type' => \PDO::PARAM_INT
+        ],
+        'avance' => [
+            'type' => \PDO::PARAM_INT
+        ],
+        'taux_horaire' => [
+            'type' => \PDO::PARAM_INT
+        ],
+        'frais_forfaitaire' => [
+            'type' => \PDO::PARAM_INT
+        ],
+        'commission_fofaitaire_pax' => [
+            'type' => \PDO::PARAM_INT
+        ],
+        'commission_billeterie' => [
+            'type' => \PDO::PARAM_INT
+        ],
+        'taux_commission_pax_heure' => [
+            'type' => \PDO::PARAM_INT
+        ],
+        'taux_tva' => [
+            'type' => \PDO::PARAM_INT
         ]
 
     ];
@@ -95,10 +131,9 @@ class Mission extends \Modelight\Model
      */
     protected $date;
 
-
-/**
-* @return int
-*/
+    /**
+     * @return int
+     */
     protected $accept;
 
     /**
@@ -111,10 +146,13 @@ class Mission extends \Modelight\Model
 
     /**
      * @param mixed $accept
+     * @return $this
      */
     public function setAccept($accept)
     {
         $this->accept = $accept;
+
+        return $this;
     }
 
     /**
