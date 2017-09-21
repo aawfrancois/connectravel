@@ -145,12 +145,13 @@ class Mission extends \Modelight\Model
     }
 
     /**
-     * @param mixed $accept
+     * @param mixed $user
      * @return $this
      */
-    public function setAccept($accept)
+    public function setAccept(\ConnecTravel\Model\User $user)
     {
-        $this->accept = $accept;
+        $email = $user->getEmail();
+        $this->accept = $email;
 
         return $this;
     }

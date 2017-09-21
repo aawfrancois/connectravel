@@ -97,12 +97,15 @@ class Mission extends \ConnecTravel\Controller
     {
         $id = $request->getParam('id');
 
+        /* @var \ConnecTravel\Model\Mission $mission */
         $mission = $this->getDataSource()->findOneBy(\ConnecTravel\Model\Mission::class, [
             'id' => [
                 'type' => \PDO::PARAM_INT,
                 'value' => $id
             ]
         ]);
+        $mission->setAccept();
+
 
         return $response->withRedirect('/admin/mission');
     }
