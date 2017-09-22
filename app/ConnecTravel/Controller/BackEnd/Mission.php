@@ -104,7 +104,8 @@ class Mission extends \ConnecTravel\Controller
                 'value' => $id
             ]
         ]);
-        $mission->setAccept();
+
+        $mission->setAccept($_SESSION['email']);
 
 
         return $response->withRedirect('/admin/mission');

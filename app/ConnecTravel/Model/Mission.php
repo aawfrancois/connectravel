@@ -75,7 +75,7 @@ class Mission extends \Modelight\Model
         'frais_forfaitaire' => [
             'type' => \PDO::PARAM_INT
         ],
-        'commission_fofaitaire_pax' => [
+        'commission_forfaitaire_pax' => [
             'type' => \PDO::PARAM_INT
         ],
         'commission_billeterie' => [
@@ -132,29 +132,71 @@ class Mission extends \Modelight\Model
     protected $date;
 
     /**
-     * @return int
+     * @return string
      */
     protected $accept;
 
     /**
-     * @return mixed
+     * @var int
      */
-    public function getAccept()
-    {
-        return $this->accept;
-    }
+    protected $salary;
 
     /**
-     * @param mixed $user
-     * @return $this
+     * @var int
      */
-    public function setAccept(\ConnecTravel\Model\User $user)
-    {
-        $email = $user->getEmail();
-        $this->accept = $email;
+    protected $time_off;
 
-        return $this;
-    }
+    /**
+     * @var int
+     */
+    protected $precarity;
+
+    /**
+     * @var int
+     */
+    protected $commission_forfaitaire;
+
+    /**
+     * @var int
+     */
+    protected $commission_pax;
+
+    /**
+     * @var int
+     */
+    protected $avance;
+
+    /**
+     * @var int
+     */
+    protected $taux_horaire;
+
+    /**
+     * @var int
+     */
+    protected $frais_forfaitaire;
+
+    /**
+     * @var int
+     */
+    protected $commission_forfaitaire_pax;
+
+    /**
+     * @var int
+     */
+    protected $commission_billeterie;
+
+    /**
+     * @var int
+     */
+    protected $taux_commission_pax_heure;
+
+    /**
+     * @var int
+     */
+    protected $taux_tva;
+
+
 
     /**
      * @return int
@@ -298,6 +340,219 @@ class Mission extends \Modelight\Model
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getAccept()
+    {
+        return $this->accept;
+    }
+
+    /**
+     * @param $accept
+     * @return $this
+     */
+    public function setAccept ($accept)
+    {
+        $this->accept = $accept;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSalary()
+    {
+        return $this->salary;
+    }
+
+    /**
+     * @param int $salary
+     */
+    public function setSalary($salary)
+    {
+        $this->salary = $salary;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTimeOff()
+    {
+        return $this->time_off;
+    }
+
+    /**
+     * @param int $time_off
+     */
+    public function setTimeOff($time_off)
+    {
+        $this->time_off = $time_off;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPrecarity()
+    {
+        return $this->precarity;
+    }
+
+    /**
+     * @param int $precarity
+     */
+    public function setPrecarity($precarity)
+    {
+        $this->precarity = $precarity;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCommissionForfaitaire()
+    {
+        return $this->commission_forfaitaire;
+    }
+
+    /**
+     * @param int $commission_forfaitaire
+     */
+    public function setCommissionForfaitaire($commission_forfaitaire)
+    {
+        $this->commission_forfaitaire = $commission_forfaitaire;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCommissionPax()
+    {
+        return $this->commission_pax;
+    }
+
+    /**
+     * @param int $commission_pax
+     */
+    public function setCommissionPax($commission_pax)
+    {
+        $this->commission_pax = $commission_pax;
+    }
+
+    /**
+     * @return int
+     */
+    public function getAvance()
+    {
+        return $this->avance;
+    }
+
+    /**
+     * @param int $avance
+     */
+    public function setAvance($avance)
+    {
+        $this->avance = $avance;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTauxHoraire()
+    {
+        return $this->taux_horaire;
+    }
+
+    /**
+     * @param int $taux_horaire
+     */
+    public function setTauxHoraire($taux_horaire)
+    {
+        $this->taux_horaire = $taux_horaire;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFraisForfaitaire()
+    {
+        return $this->frais_forfaitaire;
+    }
+
+    /**
+     * @param int $frais_forfaitaire
+     */
+    public function setFraisForfaitaire($frais_forfaitaire)
+    {
+        $this->frais_forfaitaire = $frais_forfaitaire;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCommissionForfaitairePax()
+    {
+        return $this->commission_forfaitaire_pax;
+    }
+
+    /**
+     * @param int $commission_forfaitaire_pax
+     */
+    public function setCommissionForfaitairePax($commission_forfaitaire_pax)
+    {
+        $this->commission_forfaitaire_pax = $commission_forfaitaire_pax;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCommissionBilleterie()
+    {
+        return $this->commission_billeterie;
+    }
+
+    /**
+     * @param int $commission_billeterie
+     */
+    public function setCommissionBilleterie($commission_billeterie)
+    {
+        $this->commission_billeterie = $commission_billeterie;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTauxCommissionPaxHeure()
+    {
+        return $this->taux_commission_pax_heure;
+    }
+
+    /**
+     * @param int $taux_commission_pax_heure
+     */
+    public function setTauxCommissionPaxHeure($taux_commission_pax_heure)
+    {
+        $this->taux_commission_pax_heure = $taux_commission_pax_heure;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTauxTva()
+    {
+        return $this->taux_tva;
+    }
+
+    /**
+     * @param int $taux_tva
+     */
+    public function setTauxTva($taux_tva)
+    {
+        $this->taux_tva = $taux_tva;
+    }
+
+
 
 
 }
