@@ -39,12 +39,13 @@
 {{ flash.message('error')[0] }}
 
 {% block content %}
-    {% block javascripts %}
+    {% block javascript %}
         <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="/js/sb-admin-2.min.js"></script>
         <script type="text/javascript" src="/js/toastr.min.js"></script>
-        <script type="text/javascript" src="/js/jquery.validate.min.css"></script>
+        <script type="text/javascript" src="/js/jquery.validate.min.js"></script>
         <script type="text/javascript" src="/js/toastr.min.js"></script>
     {% endblock %}
 {% endblock %}

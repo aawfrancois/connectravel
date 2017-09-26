@@ -17,20 +17,20 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-12">
-                                <form role="form" method="post">
+                                <form role="form" method="post" id="FormUser">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-user-circle-o"></i>
                                             </span>
-                                                <input type="text" class="form-control" name="lastname" placeholder="Nom" value="{{ user.getLastname() }}">
+                                                <input type="text" class="form-control" name="lastname" placeholder="Nom *" value="{{ user.getLastname() }}">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-user-circle-o"></i>
                                             </span>
-                                                <input type="text" class="form-control" name="firstname" placeholder="Prenom" value="{{ user.getFirstname() }}">
+                                                <input type="text" class="form-control" name="firstname" placeholder="Prenom *" value="{{ user.getFirstname() }}">
                                             </div>
                                         </div>
                                     </div>
@@ -39,7 +39,7 @@
                                             <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-calendar"></i>
                                             </span>
-                                                <input type="text" class="form-control" name="birth_date" placeholder="Date de naissance" value="{{ user.getBirthDate() }}">
+                                                <input type="date" class="form-control" name="birth_date" placeholder="Date de naissance *" value="{{ user.getBirthDate() }}">
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
@@ -62,21 +62,21 @@
                                             <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-street-view"></i>
                                             </span>
-                                                <input type="text" class="form-control" name="adress" placeholder="Adresse" value="{{ user.getAdress() }}">
+                                                <input type="text" class="form-control" name="adress" placeholder="Adresse *" value="{{ user.getAdress() }}">
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-street-view"></i>
                                             </span>
-                                                <input type="text" class="form-control" name="postal_code" placeholder="Code postal" value="{{ user.getPostalCode() }}">
+                                                <input type="text" class="form-control" name="postal_code" placeholder="Code postal *" value="{{ user.getPostalCode() }}">
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-street-view"></i>
                                             </span>
-                                                <input type="text" class="form-control" name="city" placeholder="Ville" value="{{ user.getCity() }}">
+                                                <input type="text" class="form-control" name="city" placeholder="Ville *" value="{{ user.getCity() }}">
                                             </div>
                                         </div>
                                     </div>
@@ -92,14 +92,14 @@
                                             <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-envelope-o"></i>
                                             </span>
-                                                <input type="text" class="form-control" name="email" placeholder="Email" value="{{ user.getEmail() }}">
+                                                <input type="text" class="form-control required" name="email" placeholder="Email *" value="{{ user.getEmail() }}">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-key"></i>
                                             </span>
-                                        <input type="password" class="form-control" name="password" placeholder="Mot de passe" value="{{ user.getPassword() }}">
+                                        <input type="password" class="form-control" name="password" placeholder="Mot de passe *" value="{{ user.getPassword() }}">
                                     </div>
                                     <input type="hidden" name="__posted" value="1"/>
                                     <button type="submit" class="btn btn-primary pull-right">Valider</button>
@@ -111,4 +111,10 @@
             </div>
         </div>
     </div>
+    {% block javascript %}
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.validate.js"></script>
+        <script type="text/javascript" src="/js/BackEnd/userEdit.js"></script>
+    {% endblock %}
 {% endblock %}
