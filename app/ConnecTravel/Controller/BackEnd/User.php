@@ -65,6 +65,21 @@ class User extends \ConnecTravel\Controller
     public function passwordLost(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
         
+
+        $transport = (new \Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
+            ->setUsername('antoinefrancois95@gmail.com')
+            ->setPassword('jkl007jkl007')
+            ;
+
+        $mailer = new \Swift_Mailer($transport);
+
+        $message = (new \Swift_Message('toto'))
+                    ->setFrom(['antoinefrancois95@gmail.com' => 'antoine'])
+                    ->setTo(['antoinefrancois95@gmail.com' => 'francois'])
+                    ->setBody('Here is the message itself')
+            ;
+
+        $result = $mailer->send($message);
     }
 
 
