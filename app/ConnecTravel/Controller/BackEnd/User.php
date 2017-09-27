@@ -62,6 +62,11 @@ class User extends \ConnecTravel\Controller
         ]);
     }
 
+    public function passwordLost(\Slim\Http\Request $request, \Slim\Http\Response $response)
+    {
+        
+    }
+
 
     public function logout(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
@@ -118,7 +123,8 @@ class User extends \ConnecTravel\Controller
         return $this->getView()->render($response, 'BackEnd/Registration/inscription.html.twig');
     }
 
-    public function accept(\Slim\Http\Request $request, \Slim\Http\Response $response){
+    public function accept(\Slim\Http\Request $request, \Slim\Http\Response $response)
+    {
 
     }
 

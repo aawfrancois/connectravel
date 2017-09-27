@@ -69,7 +69,7 @@
                                             <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-street-view"></i>
                                             </span>
-                                                <input type="text" class="form-control" name="postal_code" placeholder="Code postal *" value="{{ user.getPostalCode() }}">
+                                                <input type="text" id="autocomplete" class="form-control" name="postal_code" placeholder="Code postal *" value="{{ user.getPostalCode() }}">
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
@@ -116,5 +116,6 @@
         <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="/js/jquery.validate.js"></script>
         <script type="text/javascript" src="/js/BackEnd/userEdit.js"></script>
+        <script type="text/javascript" src="/js/jquery.easy-autocomplete.js"></script>
     {% endblock %}
 {% endblock %}

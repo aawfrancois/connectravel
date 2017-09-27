@@ -1,0 +1,1414 @@
+[
+  {
+    "name": "01000",
+    "code": "BOURG EN BRESSE"
+  },
+  {
+    "name": "01000",
+    "code": "BROU"
+  },
+  {
+    "name": "01000",
+    "code": "ST DENIS LES BOURG"
+  },
+  {
+    "name": "01090",
+    "code": "AMAREINS"
+  },
+  {
+    "name": "01090",
+    "code": "AMAREINS FRANCHELEINS CES"
+  },
+  {
+    "name": "01090",
+    "code": "CESSEINS"
+  },
+  {
+    "name": "01090",
+    "code": "GENOUILLEUX"
+  },
+  {
+    "name": "01090",
+    "code": "GUEREINS"
+  },
+  {
+    "name": "01090",
+    "code": "LURCY"
+  },
+  {
+    "name": "01090",
+    "code": "MONTCEAUX"
+  },
+  {
+    "name": "01090",
+    "code": "MONTMERLE SUR SAONE"
+  },
+  {
+    "name": "01100",
+    "code": "APREMONT"
+  },
+  {
+    "name": "01100",
+    "code": "ARBENT"
+  },
+  {
+    "name": "01100",
+    "code": "BOUVENT"
+  },
+  {
+    "name": "01100",
+    "code": "GEOVREISSET"
+  },
+  {
+    "name": "01100",
+    "code": "OYONNAX"
+  },
+  {
+    "name": "01100",
+    "code": "VEYZIAT"
+  },
+  {
+    "name": "01110",
+    "code": "ARANC"
+  },
+  {
+    "name": "01110",
+    "code": "BRENOD"
+  },
+  {
+    "name": "01110",
+    "code": "CHAMPDOR"
+  },
+  {
+    "name": "01110",
+    "code": "CORCELLES"
+  },
+  {
+    "name": "01110",
+    "code": "CORLIER"
+  },
+  {
+    "name": "01110",
+    "code": "CORMARANCHE EN BUGEY"
+  },
+  {
+    "name": "01110",
+    "code": "HAUTEVILLE LOMPNES"
+  },
+  {
+    "name": "01110",
+    "code": "HOSTIAS"
+  },
+  {
+    "name": "01110",
+    "code": "PREMILLIEU"
+  },
+  {
+    "name": "01110",
+    "code": "THEZILLIEU"
+  },
+  {
+    "name": "01120",
+    "code": "CHANES"
+  },
+  {
+    "name": "01120",
+    "code": "CORDIEUX"
+  },
+  {
+    "name": "01120",
+    "code": "DAGNEUX"
+  },
+  {
+    "name": "01120",
+    "code": "JAILLEUX"
+  },
+  {
+    "name": "01120",
+    "code": "LA BOISSE"
+  },
+  {
+    "name": "01120",
+    "code": "LA LECHERE"
+  },
+  {
+    "name": "01120",
+    "code": "MONTLUEL"
+  },
+  {
+    "name": "01120",
+    "code": "NIEVROZ"
+  },
+  {
+    "name": "01120",
+    "code": "PIZAY"
+  },
+  {
+    "name": "01120",
+    "code": "RAPAN"
+  },
+  {
+    "name": "01120",
+    "code": "STE CROIX"
+  },
+  {
+    "name": "01120",
+    "code": "THIL"
+  },
+  {
+    "name": "01130",
+    "code": "BELLEYDOUX"
+  },
+  {
+    "name": "01130",
+    "code": "CHARIX"
+  },
+  {
+    "name": "01130",
+    "code": "ECHALLON"
+  },
+  {
+    "name": "01130",
+    "code": "GIRON"
+  },
+  {
+    "name": "01130",
+    "code": "LALLEYRIAT"
+  },
+  {
+    "name": "01130",
+    "code": "LE POIZAT"
+  },
+  {
+    "name": "01130",
+    "code": "LES NEYROLLES"
+  },
+  {
+    "name": "01130",
+    "code": "NANTUA"
+  },
+  {
+    "name": "01130",
+    "code": "PLAGNE"
+  },
+  {
+    "name": "01130",
+    "code": "ST GERMAIN DE JOUX"
+  },
+  {
+    "name": "01140",
+    "code": "GARNERANS"
+  },
+  {
+    "name": "01140",
+    "code": "ILLIAT"
+  },
+  {
+    "name": "01140",
+    "code": "MOGNENEINS"
+  },
+  {
+    "name": "01140",
+    "code": "PEYZIEUX SUR SAONE"
+  },
+  {
+    "name": "01140",
+    "code": "ST DIDIER SUR CHALARONNE"
+  },
+  {
+    "name": "01140",
+    "code": "ST ETIENNE SUR CHALARONNE"
+  },
+  {
+    "name": "01140",
+    "code": "THOISSEY"
+  },
+  {
+    "name": "01140",
+    "code": "VALEINS"
+  },
+  {
+    "name": "01150",
+    "code": "BLYES"
+  },
+  {
+    "name": "01150",
+    "code": "CHAZEY SUR AIN"
+  },
+  {
+    "name": "01150",
+    "code": "LAGNIEU"
+  },
+  {
+    "name": "01150",
+    "code": "LEYMENT"
+  },
+  {
+    "name": "01150",
+    "code": "SAULT BRENAZ"
+  },
+  {
+    "name": "01150",
+    "code": "SOUCLIN"
+  },
+  {
+    "name": "01150",
+    "code": "ST SORLIN EN BUGEY"
+  },
+  {
+    "name": "01150",
+    "code": "ST VULBAS"
+  },
+  {
+    "name": "01150",
+    "code": "STE JULIE"
+  },
+  {
+    "name": "01150",
+    "code": "VAUX EN BUGEY"
+  },
+  {
+    "name": "01150",
+    "code": "VILLEBOIS"
+  },
+  {
+    "name": "01160",
+    "code": "DRUILLAT"
+  },
+  {
+    "name": "01160",
+    "code": "LA TRANCLIERE"
+  },
+  {
+    "name": "01160",
+    "code": "NEUVILLE SUR AIN"
+  },
+  {
+    "name": "01160",
+    "code": "PONT D AIN"
+  },
+  {
+    "name": "01160",
+    "code": "PRIAY"
+  },
+  {
+    "name": "01160",
+    "code": "ST MARTIN DU MONT"
+  },
+  {
+    "name": "01160",
+    "code": "VARAMBON"
+  },
+  {
+    "name": "01170",
+    "code": "CESSY"
+  },
+  {
+    "name": "01170",
+    "code": "CHEVRY"
+  },
+  {
+    "name": "01170",
+    "code": "CROZET"
+  },
+  {
+    "name": "01170",
+    "code": "ECHENEVEX"
+  },
+  {
+    "name": "01170",
+    "code": "GEX"
+  },
+  {
+    "name": "01170",
+    "code": "MIJOUX"
+  },
+  {
+    "name": "01170",
+    "code": "SEGNY"
+  },
+  {
+    "name": "01170",
+    "code": "VESANCY"
+  },
+  {
+    "name": "01190",
+    "code": "ARBIGNY"
+  },
+  {
+    "name": "01190",
+    "code": "BOISSEY"
+  },
+  {
+    "name": "01190",
+    "code": "BOZ"
+  },
+  {
+    "name": "01190",
+    "code": "CHAVANNES SUR REYSSOUZE"
+  },
+  {
+    "name": "01190",
+    "code": "CHEVROUX"
+  },
+  {
+    "name": "01190",
+    "code": "GORREVOD"
+  },
+  {
+    "name": "01190",
+    "code": "OZAN"
+  },
+  {
+    "name": "01190",
+    "code": "PONT DE VAUX"
+  },
+  {
+    "name": "01190",
+    "code": "REYSSOUZE"
+  },
+  {
+    "name": "01190",
+    "code": "SERMOYER"
+  },
+  {
+    "name": "01190",
+    "code": "ST BENIGNE"
+  },
+  {
+    "name": "01190",
+    "code": "ST ETIENNE SUR REYSSOUZE"
+  },
+  {
+    "name": "01200",
+    "code": "BELLEGARDE SUR VALSERINE"
+  },
+  {
+    "name": "01200",
+    "code": "BILLIAT"
+  },
+  {
+    "name": "01200",
+    "code": "CHATILLON EN MICHAILLE"
+  },
+  {
+    "name": "01200",
+    "code": "CHEZERY FORENS"
+  },
+  {
+    "name": "01200",
+    "code": "CONFORT"
+  },
+  {
+    "name": "01200",
+    "code": "CRAZ EN MICHAILLE"
+  },
+  {
+    "name": "01200",
+    "code": "ELOISE"
+  },
+  {
+    "name": "01200",
+    "code": "INJOUX GENISSIAT"
+  },
+  {
+    "name": "01200",
+    "code": "LANCRANS"
+  },
+  {
+    "name": "01200",
+    "code": "LEAZ"
+  },
+  {
+    "name": "01200",
+    "code": "MONTANGES"
+  },
+  {
+    "name": "01200",
+    "code": "OCHIAZ"
+  },
+  {
+    "name": "01200",
+    "code": "ST GERMAIN SUR RHONE"
+  },
+  {
+    "name": "01210",
+    "code": "FERNEY VOLTAIRE"
+  },
+  {
+    "name": "01210",
+    "code": "ORNEX"
+  },
+  {
+    "name": "01210",
+    "code": "VERSONNEX"
+  },
+  {
+    "name": "01220",
+    "code": "DIVONNE LES BAINS"
+  },
+  {
+    "name": "01220",
+    "code": "GRILLY"
+  },
+  {
+    "name": "01220",
+    "code": "SAUVERNY"
+  },
+  {
+    "name": "01230",
+    "code": "ARANDAS"
+  },
+  {
+    "name": "01230",
+    "code": "ARGIS"
+  },
+  {
+    "name": "01230",
+    "code": "CHALEY"
+  },
+  {
+    "name": "01230",
+    "code": "CLEYZIEU"
+  },
+  {
+    "name": "01230",
+    "code": "CONAND"
+  },
+  {
+    "name": "01230",
+    "code": "EVOSGES"
+  },
+  {
+    "name": "01230",
+    "code": "NIVOLLET MONTGRIFFON"
+  },
+  {
+    "name": "01230",
+    "code": "ONCIEU"
+  },
+  {
+    "name": "01230",
+    "code": "ST RAMBERT EN BUGEY"
+  },
+  {
+    "name": "01230",
+    "code": "TENAY"
+  },
+  {
+    "name": "01230",
+    "code": "TORCIEU"
+  },
+  {
+    "name": "01240",
+    "code": "CERTINES"
+  },
+  {
+    "name": "01240",
+    "code": "DOMPIERRE SUR VEYLE"
+  },
+  {
+    "name": "01240",
+    "code": "LA CHAPELLE DU CHATELARD"
+  },
+  {
+    "name": "01240",
+    "code": "LENT"
+  },
+  {
+    "name": "01240",
+    "code": "MARLIEUX"
+  },
+  {
+    "name": "01240",
+    "code": "SERVAS"
+  },
+  {
+    "name": "01240",
+    "code": "ST ANDRE LE BOUCHOUX"
+  },
+  {
+    "name": "01240",
+    "code": "ST ANDRE SUR VIEUX JONC"
+  },
+  {
+    "name": "01240",
+    "code": "ST GERMAIN SUR RENON"
+  },
+  {
+    "name": "01240",
+    "code": "ST PAUL DE VARAX"
+  },
+  {
+    "name": "01250",
+    "code": "BOHAS"
+  },
+  {
+    "name": "01250",
+    "code": "BOHAS MEYRIAT RIGNAT"
+  },
+  {
+    "name": "01250",
+    "code": "CEYZERIAT"
+  },
+  {
+    "name": "01250",
+    "code": "CHAVANNES SUR SURAN"
+  },
+  {
+    "name": "01250",
+    "code": "CIZE"
+  },
+  {
+    "name": "01250",
+    "code": "CORVEISSIAT"
+  },
+  {
+    "name": "01250",
+    "code": "DROM"
+  },
+  {
+    "name": "01250",
+    "code": "GERMAGNAT"
+  },
+  {
+    "name": "01250",
+    "code": "GRAND CORENT"
+  },
+  {
+    "name": "01250",
+    "code": "HAUTECOURT ROMANECHE"
+  },
+  {
+    "name": "01250",
+    "code": "JASSERON"
+  },
+  {
+    "name": "01250",
+    "code": "JOURNANS"
+  },
+  {
+    "name": "01250",
+    "code": "MONTAGNAT"
+  },
+  {
+    "name": "01250",
+    "code": "POUILLAT"
+  },
+  {
+    "name": "01250",
+    "code": "RAMASSE"
+  },
+  {
+    "name": "01250",
+    "code": "REVONNAS"
+  },
+  {
+    "name": "01250",
+    "code": "RIGNAT"
+  },
+  {
+    "name": "01250",
+    "code": "ROMANECHE"
+  },
+  {
+    "name": "01250",
+    "code": "SIMANDRE SUR SURAN"
+  },
+  {
+    "name": "01250",
+    "code": "ST JUST"
+  },
+  {
+    "name": "01250",
+    "code": "TOSSIAT"
+  },
+  {
+    "name": "01260",
+    "code": "BELMONT LUTHEZIEU"
+  },
+  {
+    "name": "01260",
+    "code": "BRENAZ"
+  },
+  {
+    "name": "01260",
+    "code": "CHAMPAGNE EN VALROMEY"
+  },
+  {
+    "name": "01260",
+    "code": "CHARANCIN"
+  },
+  {
+    "name": "01260",
+    "code": "FITIGNIEU"
+  },
+  {
+    "name": "01260",
+    "code": "HOTONNES"
+  },
+  {
+    "name": "01260",
+    "code": "LE GRAND ABERGEMENT"
+  },
+  {
+    "name": "01260",
+    "code": "LE PETIT ABERGEMENT"
+  },
+  {
+    "name": "01260",
+    "code": "LILIGNOD"
+  },
+  {
+    "name": "01260",
+    "code": "LOCHIEU"
+  },
+  {
+    "name": "01260",
+    "code": "LOMPNIEU"
+  },
+  {
+    "name": "01260",
+    "code": "LUTHEZIEU"
+  },
+  {
+    "name": "01260",
+    "code": "PASSIN"
+  },
+  {
+    "name": "01260",
+    "code": "RUFFIEU"
+  },
+  {
+    "name": "01260",
+    "code": "SONGIEU"
+  },
+  {
+    "name": "01260",
+    "code": "SUTRIEU"
+  },
+  {
+    "name": "01260",
+    "code": "VIEU"
+  },
+  {
+    "name": "01270",
+    "code": "BEAUPONT"
+  },
+  {
+    "name": "01270",
+    "code": "COLIGNY"
+  },
+  {
+    "name": "01270",
+    "code": "DOMSURE"
+  },
+  {
+    "name": "01270",
+    "code": "PIRAJOUX"
+  },
+  {
+    "name": "01270",
+    "code": "SALAVRE"
+  },
+  {
+    "name": "01270",
+    "code": "VERJON"
+  },
+  {
+    "name": "01270",
+    "code": "VILLEMOTIER"
+  },
+  {
+    "name": "01280",
+    "code": "MOENS"
+  },
+  {
+    "name": "01280",
+    "code": "PREVESSIN MOENS"
+  },
+  {
+    "name": "01290",
+    "code": "BEY"
+  },
+  {
+    "name": "01290",
+    "code": "BIZIAT"
+  },
+  {
+    "name": "01290",
+    "code": "CORMORANCHE SUR SAONE"
+  },
+  {
+    "name": "01290",
+    "code": "CROTTET"
+  },
+  {
+    "name": "01290",
+    "code": "CRUZILLES LES MEPILLAT"
+  },
+  {
+    "name": "01290",
+    "code": "GRIEGES"
+  },
+  {
+    "name": "01290",
+    "code": "LAIZ"
+  },
+  {
+    "name": "01290",
+    "code": "PONT DE VEYLE"
+  },
+  {
+    "name": "01290",
+    "code": "ST ANDRE D HUIRIAT"
+  },
+  {
+    "name": "01290",
+    "code": "ST JEAN SUR VEYLE"
+  },
+  {
+    "name": "01300",
+    "code": "AMBLEON"
+  },
+  {
+    "name": "01300",
+    "code": "ANDERT ET CONDON"
+  },
+  {
+    "name": "01300",
+    "code": "ARBIGNIEU"
+  },
+  {
+    "name": "01300",
+    "code": "BELLEY"
+  },
+  {
+    "name": "01300",
+    "code": "BREGNIER CORDON"
+  },
+  {
+    "name": "01300",
+    "code": "BRENS"
+  },
+  {
+    "name": "01300",
+    "code": "CHAZEY BONS"
+  },
+  {
+    "name": "01300",
+    "code": "COLOMIEU"
+  },
+  {
+    "name": "01300",
+    "code": "CONTREVOZ"
+  },
+  {
+    "name": "01300",
+    "code": "CONZIEU"
+  },
+  {
+    "name": "01300",
+    "code": "CUZIEU"
+  },
+  {
+    "name": "01300",
+    "code": "IZIEU"
+  },
+  {
+    "name": "01300",
+    "code": "MAGNIEU"
+  },
+  {
+    "name": "01300",
+    "code": "MARIGNIEU"
+  },
+  {
+    "name": "01300",
+    "code": "MASSIGNIEU DE RIVES"
+  },
+  {
+    "name": "01300",
+    "code": "MURS ET GELIGNIEUX"
+  },
+  {
+    "name": "01300",
+    "code": "NATTAGES"
+  },
+  {
+    "name": "01300",
+    "code": "PARVES"
+  },
+  {
+    "name": "01300",
+    "code": "PEYRIEU"
+  },
+  {
+    "name": "01300",
+    "code": "PREMEYZEL"
+  },
+  {
+    "name": "01300",
+    "code": "ST BENOIT"
+  },
+  {
+    "name": "01300",
+    "code": "ST BOIS"
+  },
+  {
+    "name": "01300",
+    "code": "ST CHAMP"
+  },
+  {
+    "name": "01300",
+    "code": "ST GERMAIN LES PAROISSES"
+  },
+  {
+    "name": "01310",
+    "code": "BUELLAS"
+  },
+  {
+    "name": "01310",
+    "code": "CONFRANCON"
+  },
+  {
+    "name": "01310",
+    "code": "CORGENON"
+  },
+  {
+    "name": "01310",
+    "code": "CURTAFOND"
+  },
+  {
+    "name": "01310",
+    "code": "MONTCET"
+  },
+  {
+    "name": "01310",
+    "code": "MONTRACOL"
+  },
+  {
+    "name": "01310",
+    "code": "POLLIAT"
+  },
+  {
+    "name": "01310",
+    "code": "ST MARTIN LE CHATEL"
+  },
+  {
+    "name": "01310",
+    "code": "ST REMY"
+  },
+  {
+    "name": "01320",
+    "code": "CHALAMONT"
+  },
+  {
+    "name": "01320",
+    "code": "CHATENAY"
+  },
+  {
+    "name": "01320",
+    "code": "CHATILLON LA PALUD"
+  },
+  {
+    "name": "01320",
+    "code": "CRANS"
+  },
+  {
+    "name": "01320",
+    "code": "ST NIZIER LE DESERT"
+  },
+  {
+    "name": "01330",
+    "code": "AMBERIEUX EN DOMBES"
+  },
+  {
+    "name": "01330",
+    "code": "BIRIEUX"
+  },
+  {
+    "name": "01330",
+    "code": "BOULIGNEUX"
+  },
+  {
+    "name": "01330",
+    "code": "LAPEYROUSE"
+  },
+  {
+    "name": "01330",
+    "code": "LE PLANTAY"
+  },
+  {
+    "name": "01330",
+    "code": "STE OLIVE"
+  },
+  {
+    "name": "01330",
+    "code": "VERSAILLEUX"
+  },
+  {
+    "name": "01330",
+    "code": "VILLARS LES DOMBES"
+  },
+  {
+    "name": "01340",
+    "code": "ATTIGNAT"
+  },
+  {
+    "name": "01340",
+    "code": "BEREZIAT"
+  },
+  {
+    "name": "01340",
+    "code": "CRAS SUR REYSSOUZE"
+  },
+  {
+    "name": "01340",
+    "code": "ETREZ"
+  },
+  {
+    "name": "01340",
+    "code": "FOISSIAT"
+  },
+  {
+    "name": "01340",
+    "code": "JAYAT"
+  },
+  {
+    "name": "01340",
+    "code": "MALAFRETAZ"
+  },
+  {
+    "name": "01340",
+    "code": "MARSONNAS"
+  },
+  {
+    "name": "01340",
+    "code": "MONTREVEL EN BRESSE"
+  },
+  {
+    "name": "01340",
+    "code": "ST DIDIER D AUSSIAT"
+  },
+  {
+    "name": "01340",
+    "code": "ST SULPICE"
+  },
+  {
+    "name": "01350",
+    "code": "ANGLEFORT"
+  },
+  {
+    "name": "01350",
+    "code": "BEON"
+  },
+  {
+    "name": "01350",
+    "code": "CEYZERIEU"
+  },
+  {
+    "name": "01350",
+    "code": "CRESSIN ROCHEFORT"
+  },
+  {
+    "name": "01350",
+    "code": "CULOZ"
+  },
+  {
+    "name": "01350",
+    "code": "FLAXIEU"
+  },
+  {
+    "name": "01350",
+    "code": "LAVOURS"
+  },
+  {
+    "name": "01350",
+    "code": "POLLIEU"
+  },
+  {
+    "name": "01360",
+    "code": "BALAN"
+  },
+  {
+    "name": "01360",
+    "code": "BELIGNEUX"
+  },
+  {
+    "name": "01360",
+    "code": "BRESSOLLES"
+  },
+  {
+    "name": "01360",
+    "code": "CAMP DE LA VALBONNE"
+  },
+  {
+    "name": "01360",
+    "code": "LA VALBONNE"
+  },
+  {
+    "name": "01360",
+    "code": "LOYETTES"
+  },
+  {
+    "name": "01370",
+    "code": "BENY"
+  },
+  {
+    "name": "01370",
+    "code": "COURMANGOUX"
+  },
+  {
+    "name": "01370",
+    "code": "CUISIAT"
+  },
+  {
+    "name": "01370",
+    "code": "MEILLONNAS"
+  },
+  {
+    "name": "01370",
+    "code": "PRESSIAT"
+  },
+  {
+    "name": "01370",
+    "code": "ST ETIENNE DU BOIS"
+  },
+  {
+    "name": "01370",
+    "code": "TREFFORT CUISIAT"
+  },
+  {
+    "name": "01380",
+    "code": "BAGE LA VILLE"
+  },
+  {
+    "name": "01380",
+    "code": "BAGE LE CHATEL"
+  },
+  {
+    "name": "01380",
+    "code": "BOISSEY"
+  },
+  {
+    "name": "01380",
+    "code": "DOMMARTIN"
+  },
+  {
+    "name": "01380",
+    "code": "ST ANDRE DE BAGE"
+  },
+  {
+    "name": "01380",
+    "code": "ST CYR SUR MENTHON"
+  },
+  {
+    "name": "01380",
+    "code": "ST GENIS SUR MENTHON"
+  },
+  {
+    "name": "01390",
+    "code": "CIVRIEUX"
+  },
+  {
+    "name": "01390",
+    "code": "MIONNAY"
+  },
+  {
+    "name": "01390",
+    "code": "MONTHIEUX"
+  },
+  {
+    "name": "01390",
+    "code": "RANCE"
+  },
+  {
+    "name": "01390",
+    "code": "ST ANDRE DE CORCY"
+  },
+  {
+    "name": "01390",
+    "code": "ST JEAN DE THURIGNEUX"
+  },
+  {
+    "name": "01390",
+    "code": "ST MARCEL"
+  },
+  {
+    "name": "01390",
+    "code": "TRAMOYES"
+  },
+  {
+    "name": "01400",
+    "code": "CHANOZ CHATENAY"
+  },
+  {
+    "name": "01400",
+    "code": "CHATILLON SUR CHALARONNE"
+  },
+  {
+    "name": "01400",
+    "code": "CONDEISSIAT"
+  },
+  {
+    "name": "01400",
+    "code": "DOMPIERRE SUR CHALARONNE"
+  },
+  {
+    "name": "01400",
+    "code": "L ABERGEMENT CLEMENCIAT"
+  },
+  {
+    "name": "01400",
+    "code": "NEUVILLE LES DAMES"
+  },
+  {
+    "name": "01400",
+    "code": "ROMANS"
+  },
+  {
+    "name": "01400",
+    "code": "SANDRANS"
+  },
+  {
+    "name": "01400",
+    "code": "ST GEORGES SUR RENON"
+  },
+  {
+    "name": "01400",
+    "code": "SULIGNAT"
+  },
+  {
+    "name": "01410",
+    "code": "CHAMPFROMIER"
+  },
+  {
+    "name": "01410",
+    "code": "CHEZERY FORENS"
+  },
+  {
+    "name": "01410",
+    "code": "LAJOUX"
+  },
+  {
+    "name": "01410",
+    "code": "LELEX"
+  },
+  {
+    "name": "01410",
+    "code": "MIJOUX"
+  },
+  {
+    "name": "01420",
+    "code": "CHANAY"
+  },
+  {
+    "name": "01420",
+    "code": "CORBONOD"
+  },
+  {
+    "name": "01420",
+    "code": "LHOPITAL"
+  },
+  {
+    "name": "01420",
+    "code": "SEYSSEL"
+  },
+  {
+    "name": "01420",
+    "code": "SURJOUX"
+  },
+  {
+    "name": "01430",
+    "code": "CEIGNES"
+  },
+  {
+    "name": "01430",
+    "code": "CHEVILLARD"
+  },
+  {
+    "name": "01430",
+    "code": "CONDAMINE"
+  },
+  {
+    "name": "01430",
+    "code": "IZENAVE"
+  },
+  {
+    "name": "01430",
+    "code": "LANTENAY"
+  },
+  {
+    "name": "01430",
+    "code": "MAILLAT"
+  },
+  {
+    "name": "01430",
+    "code": "OUTRIAZ"
+  },
+  {
+    "name": "01430",
+    "code": "PEYRIAT"
+  },
+  {
+    "name": "01430",
+    "code": "ST MARTIN DU FRENE"
+  },
+  {
+    "name": "01430",
+    "code": "VIEU D IZENAVE"
+  },
+  {
+    "name": "01450",
+    "code": "BOLOZON"
+  },
+  {
+    "name": "01450",
+    "code": "CERDON"
+  },
+  {
+    "name": "01450",
+    "code": "CHALLES"
+  },
+  {
+    "name": "01450",
+    "code": "LABALME"
+  },
+  {
+    "name": "01450",
+    "code": "LEYSSARD"
+  },
+  {
+    "name": "01450",
+    "code": "MERIGNAT"
+  },
+  {
+    "name": "01450",
+    "code": "PONCIN"
+  },
+  {
+    "name": "01450",
+    "code": "SERRIERES SUR AIN"
+  },
+  {
+    "name": "01450",
+    "code": "ST ALBAN"
+  },
+  {
+    "name": "01460",
+    "code": "BRION"
+  },
+  {
+    "name": "01460",
+    "code": "GEOVREISSIAT"
+  },
+  {
+    "name": "01460",
+    "code": "MONTREAL LA CLUSE"
+  },
+  {
+    "name": "01460",
+    "code": "NANTUA"
+  },
+  {
+    "name": "01460",
+    "code": "NURIEUX VOLOGNAT"
+  },
+  {
+    "name": "01460",
+    "code": "PORT"
+  },
+  {
+    "name": "01470",
+    "code": "BENONCES"
+  },
+  {
+    "name": "01470",
+    "code": "BRIORD"
+  },
+  {
+    "name": "01470",
+    "code": "MONTAGNIEU"
+  },
+  {
+    "name": "01470",
+    "code": "SEILLONNAZ"
+  },
+  {
+    "name": "01470",
+    "code": "SERRIERES DE BRIORD"
+  },
+  {
+    "name": "01480",
+    "code": "ARS SUR FORMANS"
+  },
+  {
+    "name": "01480",
+    "code": "BEAUREGARD"
+  },
+  {
+    "name": "01480",
+    "code": "CHALEINS"
+  },
+  {
+    "name": "01480",
+    "code": "FAREINS"
+  },
+  {
+    "name": "01480",
+    "code": "FRANS"
+  },
+  {
+    "name": "01480",
+    "code": "JASSANS RIOTTIER"
+  },
+  {
+    "name": "01480",
+    "code": "MESSIMY SUR SAONE"
+  },
+  {
+    "name": "01480",
+    "code": "SAVIGNEUX"
+  },
+  {
+    "name": "01480",
+    "code": "VILLENEUVE"
+  },
+  {
+    "name": "01500",
+    "code": "AMBERIEU EN BUGEY"
+  },
+  {
+    "name": "01500",
+    "code": "AMBRONAY"
+  },
+  {
+    "name": "01500",
+    "code": "AMBUTRIX"
+  },
+  {
+    "name": "01500",
+    "code": "BETTANT"
+  },
+  {
+    "name": "01500",
+    "code": "CHATEAU GAILLARD"
+  },
+  {
+    "name": "01500",
+    "code": "DOUVRES"
+  },
+  {
+    "name": "01500",
+    "code": "ST DENIS EN BUGEY"
+  },
+  {
+    "name": "01500",
+    "code": "ST MAURICE DE REMENS"
+  },
+  {
+    "name": "01510",
+    "code": "ARMIX"
+  }
+]

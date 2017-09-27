@@ -30,4 +30,19 @@ $(document).ready(function () {
             }
         }
     });
+    // $(document).ready(function () {
+    //     var options = {
+    //         url: "/ressources/ville.json",
+    //
+    //         getValue: "code",
+    //
+    //         list: {
+    //             match: {
+    //                 enabled: true
+    //             }
+    //         }
+    //     };
+    //     $("#autocomplete").easyAutocomplete(options);
+    // });
 });
+
