@@ -76,7 +76,8 @@ class User extends \ConnecTravel\Controller
         $message = \Swift_Message::newInstance('toto')
             ->setFrom(array('antoinefrancois95@gmail.com' => 'antoine'))
             ->setTo(array('antoinefrancois95@gmail.com'))
-            ->setBody('test', 'text/html');
+            ->setBody('Bonjour et bienvenue a tarata corporation
+            aujourd\'hui', 'text/html');
 //
 //        $transport = (new \Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
 //            ->setUsername('antoinefrancois95@gmail.com')
