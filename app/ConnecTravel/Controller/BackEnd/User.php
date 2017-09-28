@@ -62,22 +62,34 @@ class User extends \ConnecTravel\Controller
         ]);
     }
 
-    public function passwordLost(\Slim\Http\Request $request, \Slim\Http\Response $response)
+    public function passwordLost()
     {
-        
 
-        $transport = (new \Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
+        // Create the Transport
+        $transport = \Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
             ->setUsername('antoinefrancois95@gmail.com')
-            ->setPassword('jkl007jkl007')
-            ;
+            ->setPassword('jkl007jkl007');
 
-        $mailer = new \Swift_Mailer($transport);
+        // Create the Mailer using your created Transport
+        $mailer = \Swift_Mailer::newInstance($transport);
 
-        $message = (new \Swift_Message('toto'))
-                    ->setFrom(['antoinefrancois95@gmail.com' => 'antoine'])
-                    ->setTo(['antoinefrancois95@gmail.com' => 'francois'])
-                    ->setBody('Here is the message itself')
-            ;
+        $message = \Swift_Message::newInstance('toto')
+            ->setFrom(array('antoinefrancois95@gmail.com' => 'antoine'))
+            ->setTo(array('antoinefrancois95@gmail.com'))
+            ->setBody('test', 'text/html');
+//
+//        $transport = (new \Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
+//            ->setUsername('antoinefrancois95@gmail.com')
+//            ->setPassword('jkl007jkl007')
+//            ;
+//
+//        $mailer = \Swift_Mailer::newInstance($transport);
+//
+//        $message = (new \Swift_Message('toto'))
+//                    ->setFrom(['antoinefrancois95@gmail.com' => 'antoine'])
+//                    ->setTo(['antoinefrancois95@gmail.com' => 'francois'])
+//                    ->setBody('Here is the message itself')
+//            ;
 
         $result = $mailer->send($message);
     }
@@ -85,6 +97,7 @@ class User extends \ConnecTravel\Controller
 
     public function logout(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
+        $this->passwordLost();
         $_SESSION = array();
         session_destroy();
         return $response->withRedirect('/');
