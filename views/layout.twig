@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/sb-admin-2.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/perso.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="/css/toastr.min.css">
+    <link rel="stylesheet" href="/css/easy-autocomplete.css">
+    <link rel="stylesheet" href="/css/easy-autocomplete.themes.css">
+    <link rel="stylesheet" href="/css/perso.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-static-top">
@@ -39,13 +42,13 @@
 {{ flash.message('error')[0] }}
 
 {% block content %}
-    {% block javascripts %}
+    {% block javascript %}
         <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="/js/sb-admin-2.min.js"></script>
         <script type="text/javascript" src="/js/toastr.min.js"></script>
         <script type="text/javascript" src="/js/jquery.validate.min.js"></script>
-        <script type="text/javascript" src="/js/additional-methods.min.js"></script>
         <script type="text/javascript" src="/js/toastr.min.js"></script>
     {% endblock %}
 {% endblock %}
