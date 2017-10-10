@@ -65,18 +65,18 @@ class User extends \ConnecTravel\Controller
     public function passwordLost()
     {
 
-        // Create the Transport
-        $transport = \Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
-            ->setUsername('antoinefrancois95@gmail.com')
-            ->setPassword('jkl007jkl007');
-
-        // Create the Mailer using your created Transport
-        $mailer = \Swift_Mailer::newInstance($transport);
-
-        $message = \Swift_Message::newInstance('toto')
-            ->setFrom(array('antoinefrancois95@gmail.com' => 'antoine'))
-            ->setTo(array('antoinefrancois95@gmail.com'))
-            ->setBody('test', 'text/html');
+//        // Create the Transport
+//        $transport = \Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
+//            ->setUsername('antoinefrancois95@gmail.com')
+//            ->setPassword('jkl007jkl007');
+//
+//        // Create the Mailer using your created Transport
+//        $mailer = \Swift_Mailer::newInstance($transport);
+//
+//        $message = \Swift_Message::newInstance('toto')
+//            ->setFrom(array('antoinefrancois95@gmail.com' => 'antoine'))
+//            ->setTo(array('antoinefrancois95@gmail.com'))
+//            ->setBody('test', 'text/html');
 //
 //        $transport = (new \Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
 //            ->setUsername('antoinefrancois95@gmail.com')
@@ -90,8 +90,8 @@ class User extends \ConnecTravel\Controller
 //                    ->setTo(['antoinefrancois95@gmail.com' => 'francois'])
 //                    ->setBody('Here is the message itself')
 //            ;
-
-        $result = $mailer->send($message);
+//
+//        $result = $mailer->send($message);
     }
 
 

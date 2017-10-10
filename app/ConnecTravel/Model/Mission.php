@@ -49,7 +49,7 @@ class Mission extends \Modelight\Model
             'type' => \PDO::PARAM_STR
         ],
         'accept' => [
-            'type' => \PDO::PARAM_INT
+            'type' => \PDO::PARAM_STR
         ],
         'salary' => [
             'type' => \PDO::PARAM_INT

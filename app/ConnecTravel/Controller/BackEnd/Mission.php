@@ -20,7 +20,13 @@ class Mission extends \ConnecTravel\Controller
 
             } elseif (array_key_exists('role', $_SESSION)) {
 
-                $MissionCollection = $this->getDataSource()->findAll(\ConnecTravel\Model\Mission::class, null, null, ['mission_number' => 'ASC']);
+                //$MissionCollection = $this->getDataSource()->findAll(\ConnecTravel\Model\Mission::class, null, null, ['mission_number' => 'ASC']);
+                $MissionCollection = $this->getDataSource()->findBy(\ConnecTravel\Model\Mission::class,[
+                    'accept' => [
+                        'type' => \PDO::PARAM_STR,
+                        'value' => null
+                    ]
+                ], null, null, ['mission_number' => 'ASC']);
 
                 $this->getView()->render($response, 'BackEnd/Mission/missionList.html.twig', [
                     "MissionCollection" => $MissionCollection,
@@ -53,18 +59,17 @@ class Mission extends \ConnecTravel\Controller
             if (!array_key_exists('id', $data)) {
                 $mission = new \ConnecTravel\Model\Mission();
 
-                $datas = $request->getParsedBody();
-
-                $mission->setMissionNumber($datas['mission_number']);
-                $mission->setStartTime($datas['start_time']);
-                $mission->setEndTime($datas['end_time']);
-                $mission->setPlaceDeparture($datas['place_departure']);
-                $mission->setPlaceArrival($datas['place_arrival']);
-                $mission->setTime($datas['time']);
-                $mission->setDate($datas['date']);
+//                $datas = $request->getParsedBody();
+//
+//                $mission->setMissionNumber($datas['mission_number']);
+//                $mission->setStartTime($datas['start_time']);
+//                $mission->setEndTime($datas['end_time']);
+//                $mission->setPlaceDeparture($datas['place_departure']);
+//                $mission->setPlaceArrival($datas['place_arrival']);
+//                $mission->setTime($datas['time']);
+//                $mission->setDate($datas['date']);
 
                 $isNew = 1;
-
 
             } else {
                 $id = $request->getParam('id');
@@ -82,7 +87,6 @@ class Mission extends \ConnecTravel\Controller
                 $this->getDataSource()->save($mission);
                 return $response->withRedirect('/admin/mission');
             }
-
         }
 
         $this->getView()->render($response, 'BackEnd/Mission/missionEdit.html.twig', [
@@ -106,8 +110,7 @@ class Mission extends \ConnecTravel\Controller
         ]);
 
         $mission->setAccept($_SESSION['email']);
-
-
+        $this->getDataSource()->save($mission);
         return $response->withRedirect('/admin/mission');
     }
 

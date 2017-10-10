@@ -18,7 +18,7 @@
                             <legend>
                                 legend
                             </legend>
-                            {% if (session.role == 'admin') or (session.role == 'client') %}
+                            {% if (session.role == 'admin') or (session.role == 'customer') %}
                                 <a class="btn btn-primary btn-sm pull-right margin-bottom-5" href="/admin/mission/edit"><i
                                             class="fa fa-fw fa-plus-square-o"> </i>
                                     Ajouter une mission</a>
@@ -35,7 +35,18 @@
                                     <th>Heure de fin</th>
                                     <th>Temps de mission</th>
                                     <th>Date</th>
-                                    <th>Actions</th>
+                                    {% if (session.role == 'admin') %}
+                                    <th>
+                                        Accepté par
+                                    </th>
+                                    {% endif %}
+                                    <th class="text-center">
+                                        {% if (session.role == 'companion') %}
+                                            Action
+                                        {% elseif (session.role == 'admin') %}
+                                            Actions
+                                        {% endif %}
+                                    </th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -63,6 +74,11 @@
                                         <td>
                                             {{ mission.getDate }}
                                         </td>
+                                        {% if (session.role == 'admin') %}
+                                        <td>
+                                            {{ mission.getAccept }}
+                                        </td>
+                                        {% endif %}
                                         <td>
                                             {% if (session.role == 'admin') or (session.role == 'customer') %}
                                                 <a href="/admin/mission/edit?id={{ mission.id}}" class="btn btn-primary btn-sm"><i
@@ -70,7 +86,7 @@
                                                     Editer
                                                 </a>
                                             {% elseif (session.role == 'companion') %}
-                                                <a href="/admin/mission/accept?id={{ mission.id }}" class="btn btn-primary btn-sm"><i
+                                                <a href="/admin/mission/accept?id={{ mission.id }}" class="btn btn-primary btn-sm center-block"><i
                                                             class="fa fa-fw fa-check"></i>
                                                     Accepter
                                                 </a>
