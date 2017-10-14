@@ -37,6 +37,7 @@
                                 <th>Telephone</th>
                                 <th>Email</th>
                                 <th>Role</th>
+                                <th>Actif/Inactif</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
@@ -72,12 +73,20 @@
                                         {{ user.getRole }}
                                     </td>
                                     <td>
-                                        <a href="/admin/user/edit?id={{ user.id }}" class="btn btn-primary btn-sm"><i class="fa fa-fw fa-edit"></i>
-                                            Editer
+                                        {{ user.getActif }}
+                                    </td>
+                                    <td>
+                                        <a href="/admin/user/edit?id={{ user.id }}" data-toggle="tooltip" data-placement="top" title="Editer" class="btn btn-primary btn-sm"><i class="fa fa-fw fa-edit"></i>
                                         </a>
-                                        <a href="/admin/user/delete?id={{ user.id }}" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash-o"></i>
-                                            supprimer
+                                        <a href="/admin/user/delete?id={{ user.id }}" data-toggle="tooltip" data-placement="top" title="Supprimer" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash-o"></i>
                                         </a>
+                                        {% if user.getActif == 'inactif' %}
+                                            <a href="/admin/user/activeUser?id={{ user.id }}" data-toggle="tooltip" data-placement="top" title="Activer" class="btn btn-success btn-sm"><i class="fa fa-fw fa-eye"></i>
+                                            </a>
+                                        {% elseif user.getActif == 'actif' %}
+                                            <a href="/admin/user/activeUser?id={{ user.id }}" data-toggle="tooltip" data-placement="top" title="Désactiver" class="btn btn-success btn-sm"><i class="fa fa-fw fa-eye-slash"></i>
+                                            </a>
+                                        {% endif %}
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -97,10 +106,13 @@
         <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="/js/jquery.validate.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
         <script>
             $(document).ready(function() {
                 $('#dataTables-example').DataTable();
-            } );
+
+                $('[data-toggle="tooltip"]').tooltip();
+            });
         </script>
     {% endblock %}
 {% endblock %}

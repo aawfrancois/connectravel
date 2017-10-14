@@ -81,9 +81,7 @@
                                         {% endif %}
                                         <td>
                                             {% if (session.role == 'admin') or (session.role == 'customer') %}
-                                                <a href="/admin/mission/edit?id={{ mission.id}}" class="btn btn-primary btn-sm"><i
-                                                            class="fa fa-fw fa-edit"></i>
-                                                    Editer
+                                                <a href="/admin/mission/edit?id={{ mission.id }}" data-toggle="tooltip" data-placement="top" title="Editer" class="btn btn-primary btn-sm"><i class="fa fa-fw fa-edit"></i>
                                                 </a>
                                             {% elseif (session.role == 'companion') %}
                                                 <a href="/admin/mission/accept?id={{ mission.id }}" class="btn btn-primary btn-sm center-block"><i
@@ -92,9 +90,7 @@
                                                 </a>
                                             {% endif %}
                                             {% if (session.role == 'admin') %}
-                                                <a href="/admin/mission/delete?id={{ mission.id}}" class="btn btn-danger btn-sm"><i
-                                                            class="fa fa-fw fa-trash-o"></i>
-                                                    Supprimer
+                                                <a href="/admin/mission/delete?id={{ mission.id }}" data-toggle="tooltip" data-placement="top" title="Supprimer" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash-o"></i>
                                                 </a>
                                             {% endif %}
                                         </td>
@@ -116,9 +112,12 @@
         <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="/js/jquery.validate.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
         <script>
             $(document).ready(function() {
                 $('#dataTables-example').DataTable();
+
+                $('[data-toggle="tooltip"]').tooltip();
             } );
         </script>
     {% endblock %}

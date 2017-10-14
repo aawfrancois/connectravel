@@ -78,6 +78,9 @@ class User extends \Modelight\Model
         ],
         'updated_at' => [
             'type' => \PDO::PARAM_STR
+        ],
+        'actif' => [
+            'type' => \PDO::PARAM_STR
         ]
 
     ];
@@ -161,6 +164,11 @@ class User extends \Modelight\Model
      * @var string
      */
     protected $updated_at;
+
+    /**
+     * @var string
+     */
+    protected $actif;
 
     /**
      * @return int
@@ -466,4 +474,22 @@ class User extends \Modelight\Model
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getActif()
+    {
+        return $this->actif;
+    }
+
+    /**
+     * @param string $actif
+     */
+    public function setActif($actif)
+    {
+        $this->actif = $actif;
+    }
+
+
 }

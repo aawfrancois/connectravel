@@ -22,6 +22,7 @@ $app->map(['GET', 'POST'], '/admin/user/logout', \ConnecTravel\Controller\BackEn
 $app->map(['GET', 'POST'], '/admin/user', \ConnecTravel\Controller\BackEnd\User::class . ':index');
 $app->map(['GET', 'POST'], '/admin/user/edit', \ConnecTravel\Controller\BackEnd\User::class . ':edit');
 $app->map(['GET', 'POST'], '/admin/user/delete', \ConnecTravel\Controller\BackEnd\User::class . ':delete');
+$app->map(['GET', 'POST'], '/admin/user/activeUser', \ConnecTravel\Controller\BackEnd\User::class . ':activeUser');
 $app->map(['GET', 'POST'], '/admin/user/profil', \ConnecTravel\Controller\BackEnd\User::class . ':profil');
 
 

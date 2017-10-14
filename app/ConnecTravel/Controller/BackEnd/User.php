@@ -40,7 +40,7 @@ class User extends \ConnecTravel\Controller
                 $_SESSION['email'] = $user->getEmail();
                 $_SESSION['role'] = $user->getRole();
                 $_SESSION['id'] = $user->getId();
-
+                //$_SESSION['actif'] = $user->getActif();
 
 
                 $twig = $this->getView()->getEnvironment();
@@ -122,6 +122,7 @@ class User extends \ConnecTravel\Controller
                         $user->setEmail($email);
                         $user->setPassword(md5($password));
                         $user->setRole('companion');
+                        $user->setActif('inactif');
 
                         $newUser = $this->getDataSource()->fetch('SELECT * FROM user WHERE email = :email', [
                             'email' => [
@@ -149,11 +150,6 @@ class User extends \ConnecTravel\Controller
 
 
         return $this->getView()->render($response, 'BackEnd/Registration/inscription.html.twig');
-    }
-
-    public function accept(\Slim\Http\Request $request, \Slim\Http\Response $response)
-    {
-
     }
 
     /**
@@ -260,6 +256,34 @@ class User extends \ConnecTravel\Controller
 
         return $response->withRedirect('/admin/user');
 
+    }
+
+    public function activeUser(\Slim\Http\Request $request, \Slim\Http\Response $response, $args) {
+        $id = $request->getParam('id');
+
+        /* @var \ConnecTravel\Model\User $user */
+        $user = $this->getDataSource()->findOneBy(\ConnecTravel\Model\User::class, [
+            'id' => [
+                'type' => \PDO::PARAM_INT,
+                'value' => $id
+            ],
+        ]);
+
+
+        if ($user->getActif() === 'actif') {
+            $user->setActif('inactif');
+        } elseif ($user->getActif() ==='inactif') {
+            $user->setActif('actif');
+        }
+
+        $this->getView()->render($response, 'BackEnd/User/userList.html.twig', [
+            //
+        ]);
+
+
+        $this->getDataSource()->update($user);
+
+        return $response->withRedirect('/admin/user');
     }
 }
 

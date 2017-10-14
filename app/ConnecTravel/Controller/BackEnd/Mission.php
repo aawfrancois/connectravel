@@ -19,14 +19,17 @@ class Mission extends \ConnecTravel\Controller
                 return $response->withRedirect('/error403');
 
             } elseif (array_key_exists('role', $_SESSION)) {
+                if ($_SESSION['role'] == 'admin'){
+                    $MissionCollection = $this->getDataSource()->findAll(\ConnecTravel\Model\Mission::class, null, null, ['mission_number' => 'ASC']);
+                } elseif ($_SESSION['role'] == 'companion'){
+                    $MissionCollection = $this->getDataSource()->findBy(\ConnecTravel\Model\Mission::class,[
+                        'accept' => [
+                            'type' => \PDO::PARAM_STR,
+                            'value' => null
+                        ]
+                    ], null, null, ['mission_number' => 'ASC']);
 
-                //$MissionCollection = $this->getDataSource()->findAll(\ConnecTravel\Model\Mission::class, null, null, ['mission_number' => 'ASC']);
-                $MissionCollection = $this->getDataSource()->findBy(\ConnecTravel\Model\Mission::class,[
-                    'accept' => [
-                        'type' => \PDO::PARAM_STR,
-                        'value' => null
-                    ]
-                ], null, null, ['mission_number' => 'ASC']);
+                }
 
                 $this->getView()->render($response, 'BackEnd/Mission/missionList.html.twig', [
                     "MissionCollection" => $MissionCollection,
