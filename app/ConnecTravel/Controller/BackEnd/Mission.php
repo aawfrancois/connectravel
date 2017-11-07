@@ -117,6 +117,23 @@ class Mission extends \ConnecTravel\Controller
         return $response->withRedirect('/admin/mission');
     }
 
+    public function unassign(\Slim\Http\Request $request, \Slim\Http\Response $response, $args)
+    {
+        $id = $request->getParam('id');
+
+        /* @var \ConnecTravel\Model\Mission $mission */
+        $mission = $this->getDataSource()->findOneBy(\ConnecTravel\Model\Mission::class, [
+            'id' => [
+                'type' => \PDO::PARAM_INT,
+                'value' => $id
+            ]
+        ]);
+
+        $mission->setAccept(null);
+        $this->getDataSource()->save($mission);
+        return $response->withRedirect('/admin/mission');
+    }
+
     public function delete(\Slim\Http\Request $request, \Slim\Http\Response $response, $args)
     {
         $id = $request->getParam('id');

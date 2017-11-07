@@ -11,6 +11,18 @@
                         <h3>Modifier son profil</h3>
                     </div>
                     <div class="panel-body">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading text-center">
+                                {{ user.getFirstname }} {{ user.getLastname }}
+                            </div>
+                            <div class="panel-body">
+                                <ul class="text-center" style="list-style-type:none">
+                                    <li>Email : {{ user.getEmail }}</li>
+                                    <li>Telephone : {{ user.getPhone }}</li>
+                                    <li>Status : {{ user.getActif }}</li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-lg-12">
                                 <form role="form" method="post">
@@ -37,7 +49,7 @@
                                             <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-calendar"></i>
                                             </span>
-                                                <input type="text" class="form-control" name="birth_date"
+                                                <input type="text" onfocus="(this.type='date')" class="form-control" name="birth_date"
                                                        placeholder="Date de naissance"
                                                        value="{{ user.getBirthDate() }}">
                                             </div>
@@ -101,6 +113,14 @@
                                             </span>
                                                 <input type="text" class="form-control" name="email" placeholder="Email"
                                                        value="{{ user.getEmail() }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group input-group">
+                                                <select class="form-control" id="select" name="actif">
+                                                    <option value="inactif">inactif</option>
+                                                    <option value="actif">actif</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>

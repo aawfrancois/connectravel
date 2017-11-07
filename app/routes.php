@@ -29,6 +29,7 @@ $app->map(['GET', 'POST'], '/admin/user/profil', \ConnecTravel\Controller\BackEn
 $app->map(['GET', 'POST'], '/admin/mission', \ConnecTravel\Controller\BackEnd\Mission::class . ':index');
 $app->map(['GET', 'POST'], '/admin/mission/edit', \ConnecTravel\Controller\BackEnd\Mission::class . ':edit');
 $app->map(['GET', 'POST'], '/admin/mission/delete', \ConnecTravel\Controller\BackEnd\Mission::class . ':delete');
+$app->map(['GET', 'POST'], '/admin/mission/unassign', \ConnecTravel\Controller\BackEnd\Mission::class . ':unassign');
 $app->map(['GET', 'POST'], '/admin/mission/accept', \ConnecTravel\Controller\BackEnd\Mission::class . ':accept');
 
 

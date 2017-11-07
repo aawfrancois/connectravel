@@ -65,39 +65,44 @@ class User extends \ConnecTravel\Controller
     public function passwordLost()
     {
 
-//        // Create the Transport
-//        $transport = \Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
-//            ->setUsername('antoinefrancois95@gmail.com')
-//            ->setPassword('jkl007jkl007');
-//
-//        // Create the Mailer using your created Transport
-//        $mailer = \Swift_Mailer::newInstance($transport);
-//
-//        $message = \Swift_Message::newInstance('toto')
-//            ->setFrom(array('antoinefrancois95@gmail.com' => 'antoine'))
-//            ->setTo(array('antoinefrancois95@gmail.com'))
-//            ->setBody('test', 'text/html');
-//
-//        $transport = (new \Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
-//            ->setUsername('antoinefrancois95@gmail.com')
-//            ->setPassword('jkl007jkl007')
-//            ;
-//
-//        $mailer = \Swift_Mailer::newInstance($transport);
-//
-//        $message = (new \Swift_Message('toto'))
-//                    ->setFrom(['antoinefrancois95@gmail.com' => 'antoine'])
-//                    ->setTo(['antoinefrancois95@gmail.com' => 'francois'])
-//                    ->setBody('Here is the message itself')
-//            ;
-//
-//        $result = $mailer->send($message);
+        $email = $_SESSION['email'];
+
+        /** @var \ConnecTravel\Model\User $user */
+        $user = $this->getDataSource()->findOneBy(\ConnecTravel\Model\User::class, [
+            'email' => [
+                'type' => \PDO::PARAM_STR,
+                'value' => $email
+            ],
+        ]);
+
+        // Create the Transport
+        $transport = (new \Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
+            ->setUsername('antoinefrancois95@gmail.com')
+            ->setPassword('jkl007jkl007')
+        ;
+
+        // Create the Mailer using your created Transport
+
+        $mailer = \Swift_Mailer::newInstance($transport);
+
+        $message = (new \Swift_Message('Connectravel Mission'))
+                    ->setFrom([$user->getEmail()   => 'antoine'])
+                    ->setTo([$user->getEmail() => 'francois1'])
+                    ->setBody('Voici les documents relatifs a ta mission', 'text/html')
+                    ->attach(\Swift_Attachment::fromPath('ressources/test.html'))
+                    ->attach(\Swift_Attachment::fromPath('ressources/NDF.pdf','application/pdf'))
+
+            ;
+        $headers = $message->getHeaders();
+
+
+        $result = $mailer->send($message);
     }
 
 
     public function logout(\Slim\Http\Request $request, \Slim\Http\Response $response)
     {
-        $this->passwordLost();
+        //$this->passwordLost();
         $_SESSION = array();
         session_destroy();
         return $response->withRedirect('/');
@@ -201,18 +206,7 @@ class User extends \ConnecTravel\Controller
 
                 $datas = $request->getParsedBody();
 
-                $user->setFirstname($datas['firstname']);
-                $user->setLastname($datas['lastname']);
-                $user->setBirthDate($datas['birth_date']);
-                $user->setBirthPlace($datas['birth_place']);
-                $user->setNationality($datas['nationality']);
-                $user->setAdress($datas['adress']);
-                $user->setPostalCode($datas['postal_code']);
-                $user->setCity($datas['city']);
-                $user->setPhone($datas['phone']);
-                $user->setEmail($datas['email']);
-                $user->setPassword($datas['password']);
-
+                $password = $datas['password'];
 
                 $isNew = 1;
 
@@ -228,7 +222,10 @@ class User extends \ConnecTravel\Controller
                 $isNew = 0;
             }
             if (!empty($_POST["__posted"])) {
+                $user->setActif('actif');
+                $user->setRole('companion');
                 $user->setData($_REQUEST);
+                $user->setPassword(md5($password));
                 $this->getDataSource()->save($user);
                 return $response->withRedirect('/admin/user');
             }
@@ -284,6 +281,41 @@ class User extends \ConnecTravel\Controller
         $this->getDataSource()->update($user);
 
         return $response->withRedirect('/admin/user');
+    }
+
+    public function profil(\Slim\Http\Request $request, \Slim\Http\Response $response, $args)
+    {
+
+        if (!array_key_exists('role', $_SESSION)) {
+            return $response->withRedirect('/error403');
+        } else {
+
+                $datas = $request->getParsedBody();
+
+                $password = $datas['password'];
+                $id = $_SESSION['id'];
+                $user = $this->getDataSource()->findOneBy(\ConnecTravel\Model\User::class, [
+                    'id' => [
+                        'type' => \PDO::PARAM_INT,
+                        'value' => $id
+                    ],
+                ]);
+
+            }
+            if (!empty($_POST["__posted"])) {
+                $user->setData($_REQUEST);
+                $user->setPassword(md5($password));
+                $this->getDataSource()->save($user);
+                return $response->withRedirect('/admin/mission');
+            }
+
+        $this->getView()->render($response, 'BackEnd/User/profil.html.twig', [
+            "user" => $user,
+            "session" => $_SESSION,
+        ]);
+
+        //return $response->withRedirect('/admin/user');
+
     }
 }
 

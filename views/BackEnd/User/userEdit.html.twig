@@ -39,7 +39,7 @@
                                             <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-calendar"></i>
                                             </span>
-                                                <input type="date" class="form-control" name="birth_date" placeholder="Date de naissance *" value="{{ user.getBirthDate() }}">
+                                                <input type="text" class="form-control" name="birth_date" placeholder="Date de naissance *" onfocus="(this.type='date')" value="{{ user.getBirthDate() }}">
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
@@ -115,7 +115,28 @@
         <script type="text/javascript" src="/js/jquery.min.js"></script>
         <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="/js/jquery.validate.js"></script>
-        <script type="text/javascript" src="/js/BackEnd/userEdit.js"></script>
+        <script type="text/javascript" src="/js/toastr.min.js"></script>
+
         <script type="text/javascript" src="/js/jquery.easy-autocomplete.js"></script>
+        <script type="text/javascript">
+            $("#FormUser").submit(function(){
+
+                $.ajax({
+                    url : '/admin/user',
+                    type : 'POST',
+                    dataType : 'data',
+                    success : function(code_html, statut){ // success est toujours en place, bien sûr !
+                        toastr.success("good");
+                    },
+
+                    error : function(resultat, statut, erreur){
+                        toastr.error("good");
+                    }
+
+                });
+
+            });
+
+        </script>
     {% endblock %}
 {% endblock %}

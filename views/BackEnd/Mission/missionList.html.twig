@@ -79,18 +79,18 @@
                                             {{ mission.getAccept }}
                                         </td>
                                         {% endif %}
-                                        <td>
+                                        <td class="text-center">
                                             {% if (session.role == 'admin') or (session.role == 'customer') %}
                                                 <a href="/admin/mission/edit?id={{ mission.id }}" data-toggle="tooltip" data-placement="top" title="Editer" class="btn btn-primary btn-sm"><i class="fa fa-fw fa-edit"></i>
+                                                </a>
+                                                <a href="/admin/mission/delete?id={{ mission.id }}" data-toggle="tooltip" data-placement="top" title="Supprimer" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash-o"></i>
+                                                </a>
+                                                <a href="/admin/mission/unassign?id={{ mission.id }}" data-toggle="tooltip" data-placement="top" title="désassigner" class="btn btn-warning btn-sm"><i class="fa fa-fw fa-trash-o"></i>
                                                 </a>
                                             {% elseif (session.role == 'companion') %}
                                                 <a href="/admin/mission/accept?id={{ mission.id }}" class="btn btn-primary btn-sm center-block"><i
                                                             class="fa fa-fw fa-check"></i>
                                                     Accepter
-                                                </a>
-                                            {% endif %}
-                                            {% if (session.role == 'admin') %}
-                                                <a href="/admin/mission/delete?id={{ mission.id }}" data-toggle="tooltip" data-placement="top" title="Supprimer" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash-o"></i>
                                                 </a>
                                             {% endif %}
                                         </td>

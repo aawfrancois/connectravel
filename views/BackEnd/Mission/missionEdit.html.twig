@@ -38,7 +38,7 @@
                                             <span class="input-group-addon"><i class="fa fa-clock-o"></i>
                                             </span>
                                                 <input type="text" class="form-control" name="start_time"
-                                                       placeholder="Heure de début"
+                                                       placeholder="Heure de début" onfocus="(this.type='time')"
                                                        value="{{ mission.getStartTime() }}">
                                             </div>
                                         </div>
@@ -47,7 +47,7 @@
                                                 <span class="input-group-addon"><i class="fa fa-clock-o"></i>
                                                 </span>
                                                 <input type="text" class="form-control" name="end_time"
-                                                       placeholder="Heure de fin" value="{{ mission.getEndTime() }}">
+                                                       placeholder="Heure de fin" onfocus="(this.type='time')" value="{{ mission.getEndTime() }}">
                                             </div>
                                         </div>
                                     </div>
@@ -77,7 +77,7 @@
                                             <span class="input-group-addon"><i class="fa fa-clock-o"></i>
                                             </span>
                                                 <input type="text" class="form-control" name="time"
-                                                       placeholder="Temps de la mission"
+                                                       placeholder="Temps de la mission" onfocus="(this.type='time')"
                                                        value="{{ mission.getTime() }}">
                                             </div>
                                         </div>
@@ -85,8 +85,8 @@
                                             <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-calendar-o"></i>
                                             </span>
-                                                <input type="date" class="form-control" required ="required" id="date" name="date"
-                                                       placeholder="Date de la mission" value="{{ mission.getDate() }}">
+                                                <input type="text" class="form-control" required ="required" id="date" name="date"
+                                                       placeholder="Date de la mission" onfocus="(this.type='date')" value="{{ mission.getDate() }}">
                                             </div>
                                         </div>
                                     </div>
