@@ -54,6 +54,7 @@ class User extends \ConnecTravel\Controller
                 $this->getFlash()->addMessage('error', 'Identifiants invalides.');
 
                 return $response->withRedirect('/admin/user/login');
+                var_dump($_SESSION); die();
             }
         }
 
