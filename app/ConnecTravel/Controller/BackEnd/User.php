@@ -48,13 +48,11 @@ class User extends \ConnecTravel\Controller
 
                 $this->getFlash()->addMessage('error', 'Bonjour ' . $user->getFirstname() . ' :)');
 
-                return $response->withRedirect('/admin/user/login');
-                // return $response->withRedirect('/admin/user/list');
+                return $response->withRedirect('/admin/user');
             } catch (\InvalidArgumentException $e) {
                 $this->getFlash()->addMessage('error', 'Identifiants invalides.');
 
                 return $response->withRedirect('/admin/user/login');
-                var_dump($_SESSION); die();
             }
         }
 
