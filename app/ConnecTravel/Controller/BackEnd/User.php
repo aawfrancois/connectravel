@@ -19,7 +19,6 @@ class User extends \ConnecTravel\Controller
             $email = $request->getParam('email');
             $password = $request->getParam('password');
 
-
             try {
                 if ($email === null || $password === null) {
                     throw new \InvalidArgumentException('email or password is null.');
